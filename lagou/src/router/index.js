@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-<<<<<<< HEAD
+import Login from '@/pages/yu/Login'
+import Register from '@/pages/yu/Register'
 import Index from '@/pages/LJ/index'
+import HelloWorld from '@/components/HelloWorld'
+import company_home from '../pages/tang/company_home'
 
 Vue.use(Router)
 
@@ -12,15 +15,7 @@ export default new Router({
 		name: 'Index',
 		component: Index
 	},
-	]
-=======
-import HelloWorld from '@/components/HelloWorld'
-import company_home from '../pages/tang/company_home'
-Vue.use(Router)
-
-export default new Router({
-  routes: [
-    {
+	{
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
@@ -29,7 +24,16 @@ export default new Router({
       path: '/company_home',
       name: 'company_home',
       component: company_home
-    }
-  ]
->>>>>>> 0e2844c48dae0cfc17cf855049e9317e7c69c211
+    },
+    {
+    path: '/Register',
+    name: 'Register',
+    component: Register
+   },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login
+    },
+	]
 })

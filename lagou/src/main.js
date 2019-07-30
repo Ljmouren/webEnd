@@ -8,6 +8,7 @@ import router from './router'
 import Axios from 'axios'
 import BaiDuMap from 'vue-baidu-map'
 import StarRating from 'vue-star-rating'
+import $ from 'jquery'
 
 Vue.use(ElementUI)
 Vue.prototype.$axios=Axios

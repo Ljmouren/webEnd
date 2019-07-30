@@ -35,29 +35,6 @@
 					</div>
 				</div>
 				<div class="company_nav">
-					<!--<ul>
-							<li>
-								<a href="#">公司主页</a>
-							</li>
-							<li>
-								<a href="#">招聘职位（181）</a>
-							</li>
-							<li>
-								<a href="#">校招职位（10）</a>
-							</li>
-							<li>
-								<a href="#">公司问答</a>
-							</li>
-						</ul>-->
-
-					<!--<el-tabs v-model="activeName" @tab-click="handleClick">
-						    <el-tab-pane label="公司主页" name="first">
-						    	<slot name='first'></slot>
-						    </el-tab-pane>
-						    <el-tab-pane label="招聘职位（181）" name="second">222</el-tab-pane>
-						    <el-tab-pane label="校招职位（10）" name="third"></el-tab-pane>
-						    <el-tab-pane label="公司问答" name="fourth"></el-tab-pane>
-						  </el-tabs>-->
 					<div class="company_share">
 						分享&nbsp;
 						<a href="#" class="weibo"></a>
@@ -228,15 +205,6 @@
 	.top_info .company_nav {
 		overflow: hidden;
 	}
-	/*.top_info .company_nav ul {
-		overflow: hidden;
-	}
-	
-	.top_info .company_nav ul li {
-		float: left;
-		margin-right: 35px;
-		line-height: 54px;
-	}*/
 	
 	.top_info .company_nav .company_share {
 		display: flex;
@@ -245,6 +213,7 @@
 		margin-top: 17px;
 		margin-bottom: 7px;
 		float: right;
+		/*z-index: 10;*/
 	}
 	
 	.top_info .company_nav .company_share a {
@@ -292,7 +261,7 @@
 	.el-tabs {
 		position: absolute;
 		top: 204px;
-		
+		width: 88%;
 	}
 	
 	.el-tabs .el-tabs__header {

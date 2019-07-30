@@ -124,7 +124,7 @@
 </template>
 
 <script>
-	import font from 'font-awesome-4.7.0/css/font-awesome.min.css'
+	import font from 'font-awesome/css/font-awesome.min.css'
 	import Form from '../../components/Form'
 	export default {
   name: 'HelloWorld',

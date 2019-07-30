@@ -9,6 +9,9 @@ import Axios from 'axios'
 import BaiDuMap from 'vue-baidu-map'
 import StarRating from 'vue-star-rating'
 
+
+
+import 'font-awesome/css/font-awesome.css';
 Vue.use(ElementUI)
 Vue.prototype.$axios=Axios
 Vue.component('star-rating', StarRating);

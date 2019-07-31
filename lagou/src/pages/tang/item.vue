@@ -1,14 +1,11 @@
 <template>
     <div class="item_container">
-<<<<<<< HEAD
 					<div class="item_title">
 						{{item_title}}
 					</div>
-=======
 					<span class="item_title">
 						{{item_title}}
 					</span>
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 					<div class="item_content">
 					<slot name='product_content'></slot>
 					</div>
@@ -27,34 +24,25 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .item_title {
-<<<<<<< HEAD
   position: absolute;
-=======
   position: relative;
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
   background: white;
   color: #000000;
   top: -14px;
   padding-right: 8px;
-<<<<<<< HEAD
-=======
   font-size: 19px;
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 }
 .item_container {
   position: relative;
   display: inline-block;
   border-top: 1px solid #e5e5e5;
   color: #555;
-<<<<<<< HEAD
   box-shadow: 8px 0 4px -4px #f5f5f5;
   margin-top: 50px;
   width: 64%;
   padding-right: 20px;
-=======
   padding-right: 20px;
   width: 93%;
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 }
 .product_content {
   position: relative;

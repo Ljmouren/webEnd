@@ -35,7 +35,6 @@
 					</div>
 				</div>
 				<div class="company_nav">
-<<<<<<< HEAD
 					<!--<ul>
 							<li>
 								<a href="#">公司主页</a>
@@ -59,8 +58,6 @@
 						    <el-tab-pane label="校招职位（10）" name="third"></el-tab-pane>
 						    <el-tab-pane label="公司问答" name="fourth"></el-tab-pane>
 						  </el-tabs>-->
-=======
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 					<div class="company_share">
 						分享&nbsp;
 						<a href="#" class="weibo"></a>
@@ -231,7 +228,6 @@
 	.top_info .company_nav {
 		overflow: hidden;
 	}
-<<<<<<< HEAD
 	/*.top_info .company_nav ul {
 		overflow: hidden;
 	}
@@ -241,8 +237,6 @@
 		margin-right: 35px;
 		line-height: 54px;
 	}*/
-=======
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 	
 	.top_info .company_nav .company_share {
 		display: flex;
@@ -251,10 +245,7 @@
 		margin-top: 17px;
 		margin-bottom: 7px;
 		float: right;
-<<<<<<< HEAD
-=======
 		/*z-index: 10;*/
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 	}
 	
 	.top_info .company_nav .company_share a {
@@ -301,12 +292,8 @@
 	}
 	.el-tabs {
 		position: absolute;
-		top: 204px;
-<<<<<<< HEAD
-		
-=======
+		top: 204px;		
 		width: 88%;
->>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 	}
 	
 	.el-tabs .el-tabs__header {

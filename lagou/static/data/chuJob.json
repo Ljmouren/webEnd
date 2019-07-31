@@ -1,0 +1,346 @@
+{
+	
+    "recommend_one": [
+    	{
+    		"title": "硬件工程师 ",
+			"address":"上海·长征",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"中斯加特",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image/M00/04/01/CgqKkVbFXu-AdddWAAAnWoe0cyg923.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“双休，绩效奖金丰富，团队氛围好”",
+            "tag":"项目管理"
+           
+    		
+    	},
+    	{
+    		"title": "数据分析师",
+			"address":"北京·大山子",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"便利蜂",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/image2/M00/07/D3/CgpzWlYAwDeARlT4AAAiPR7pRLk586.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“五险一金，加班福利，生日福利，定期团建”",
+    		"tag":"广告营销"
+    	},{
+    		"title": "高级运维工程师",
+			"address":"重庆",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M01/DA/9B/CgotOVxlNgWAWWpfAABaqp9XSA4482.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“半年调薪一次、全勤奖、餐补、双薪”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "u3d客户端",
+			"address":"北京·望京",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/44/56/CgpOIFq42raAfJsWAABFaM5qPg4466.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“年终奖金 免费下午茶 团队旅游”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "网络营销",
+			"address":"深圳·科技园",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M01/9F/03/CgoB5lvO0aGAIKeBAAB1KGmA2o0405.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“周末双休,免费团建旅游,导师指导”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "产品经理",
+			"address":"广州·白云区",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M00/26/86/CgoB5lofYVOAAx8uAAAMt-lD2ng998.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“扁平化管理零食下午茶团建旅游节日福利”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "社区治理产品经理 ",
+			"address":"上海·漕河泾",
+    		"date":"16:35",
+            "wage": "15k-25k",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image/M00/00/ED/CgqKkVZbw3eAS5NKAAAptNglgQY659.jpg",
+            "jobName":"知乎",
+            "desc":"社交/ D轮及以上 / 500-2000人",
+            "fuli":"“上升空间、资源丰富、环境宽松”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "市场总监",
+			"address":"北京·上地",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/4F/87/Cgq2xlrynTeAOOp6AAIjpo4pnvA360.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“双休，绩效奖金丰富，团队氛围好”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "智能硬件产品经理",
+			"address":"上海·长征",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/51/DE/CgpOIFsCSQ6AOaylAAAW-AQ3NIg947.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“14薪”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "内容质量审核 ",
+			"address":"上海·长征",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"中斯加特",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image/M00/04/01/CgqKkVbFXu-AdddWAAAnWoe0cyg923.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“双休，绩效奖金丰富，团队氛围好”",
+            "tag":"项目管理"
+           
+    		
+    	},
+    	{
+    		"title": "数据分析师",
+			"address":"北京·大山子",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"便利蜂",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/image2/M00/07/D3/CgpzWlYAwDeARlT4AAAiPR7pRLk586.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“五险一金，加班福利，生日福利，定期团建”",
+    		"tag":"广告营销"
+    	},{
+    		"title": "高级运维工程师",
+			"address":"重庆",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M01/DA/9B/CgotOVxlNgWAWWpfAABaqp9XSA4482.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“半年调薪一次、全勤奖、餐补、双薪”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "u3d客户端",
+			"address":"北京·望京",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/44/56/CgpOIFq42raAfJsWAABFaM5qPg4466.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“年终奖金 免费下午茶 团队旅游”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "网络营销",
+			"address":"深圳·科技园",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M01/9F/03/CgoB5lvO0aGAIKeBAAB1KGmA2o0405.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“周末双休,免费团建旅游,导师指导”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "产品经理",
+			"address":"广州·白云区",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M00/26/86/CgoB5lofYVOAAx8uAAAMt-lD2ng998.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“扁平化管理零食下午茶团建旅游节日福利”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "社区治理产品经理 ",
+			"address":"上海·漕河泾",
+    		"date":"16:35",
+            "wage": "15k-25k",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image/M00/00/ED/CgqKkVZbw3eAS5NKAAAptNglgQY659.jpg",
+            "jobName":"知乎",
+            "desc":"社交/ D轮及以上 / 500-2000人",
+            "fuli":"“上升空间、资源丰富、环境宽松”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "市场总监",
+			"address":"北京·上地",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/4F/87/Cgq2xlrynTeAOOp6AAIjpo4pnvA360.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“双休，绩效奖金丰富，团队氛围好”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "智能硬件产品经理",
+			"address":"上海·长征",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/51/DE/CgpOIFsCSQ6AOaylAAAW-AQ3NIg947.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“14薪”",
+            "tag":"广告营销"
+    		
+    	},
+    	{
+    		"title": "数据分析师",
+			"address":"北京·大山子",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"便利蜂",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/image2/M00/07/D3/CgpzWlYAwDeARlT4AAAiPR7pRLk586.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“五险一金，加班福利，生日福利，定期团建”",
+    		"tag":"广告营销"
+    	},{
+    		"title": "高级运维工程师",
+			"address":"重庆",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M01/DA/9B/CgotOVxlNgWAWWpfAABaqp9XSA4482.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“半年调薪一次、全勤奖、餐补、双薪”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "u3d客户端",
+			"address":"北京·望京",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/44/56/CgpOIFq42raAfJsWAABFaM5qPg4466.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“年终奖金 免费下午茶 团队旅游”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "网络营销",
+			"address":"深圳·科技园",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M01/9F/03/CgoB5lvO0aGAIKeBAAB1KGmA2o0405.png",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“周末双休,免费团建旅游,导师指导”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "产品经理",
+			"address":"广州·白云区",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image2/M00/26/86/CgoB5lofYVOAAx8uAAAMt-lD2ng998.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“扁平化管理零食下午茶团建旅游节日福利”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "社区治理产品经理 ",
+			"address":"上海·漕河泾",
+    		"date":"16:35",
+            "wage": "15k-25k",
+            "workdate":" 3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image/M00/00/ED/CgqKkVZbw3eAS5NKAAAptNglgQY659.jpg",
+            "jobName":"知乎",
+            "desc":"社交/ D轮及以上 / 500-2000人",
+            "fuli":"“上升空间、资源丰富、环境宽松”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "市场总监",
+			"address":"北京·上地",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/4F/87/Cgq2xlrynTeAOOp6AAIjpo4pnvA360.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“双休，绩效奖金丰富，团队氛围好”",
+            "tag":"广告营销"
+    		
+    	},{
+    		"title": "智能硬件产品经理",
+			"address":"上海·长征",
+    		"date":"16:35",
+            "wage": "10K-16K",
+            "workdate":"3-5年/本科",
+            "type":"智能硬件",
+            "cover_url": "http://www.lgstatic.com/thumbnail_120x120/i/image3/M00/51/DE/CgpOIFsCSQ6AOaylAAAW-AQ3NIg947.jpg",
+            "jobName":"超盟金服",
+            "desc":"移动互联网/A轮/深圳",
+            "fuli":"“14薪”",
+            "tag":"广告营销"
+    		
+    	}
+    ]
+}

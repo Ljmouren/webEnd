@@ -47,6 +47,12 @@
 					}
 				}
 			},
+//			login(){
+//				if(){
+//					
+//				}
+//				this.$router.push('/Login')
+//			}
 		}
 	}
 </script>

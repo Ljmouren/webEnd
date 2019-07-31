@@ -5,17 +5,13 @@ import Register from '@/pages/yu/Register'
 import Index from '@/pages/LJ/index'
 import HelloWorld from '@/components/HelloWorld'
 import company_home from '../pages/tang/company_home'
+import company from '../pages/LH/company'
 import jobHome from '@/pages/chu/jobHome'
 import xiangqing from '@/pages/chu/xiangqing'
 Vue.use(Router)
 
 export default new Router({
 	routes: [
-	{
-      path: '/Login',
-      name: 'Login',
-      component: Login
-    },
 	{
 		path: '/Index',
 		name: 'Index',
@@ -30,6 +26,11 @@ export default new Router({
       path: '/company_home',
       name: 'company_home',
       component: company_home
+    },
+    {
+      path: '/company',
+      name: 'company',
+      component: company
     },
     {
     path: '/Register',

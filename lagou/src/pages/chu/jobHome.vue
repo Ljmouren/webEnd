@@ -8,77 +8,158 @@
 		</div>
 		<!------------------------------------------->
 		<div class="middle">
-			<div class="middle-1">
-				<ul>
-					<li>
-						<p>工作地点 :</p>
-						<a href="#">全国</a>
-						<a href="#">北京</a>
-						<a href="#">上海</a>
-						<a href="#">广州</a>
-						<a href="#">杭州</a>
-						<a href="#">成都</a>
-						<a href="#">南京</a>
-						<a href="#">武汉</a>
-						<a href="#">西安</a>
-						<a href="#">厦门</a>
-						<a href="#">长沙</a>
-						<a href="#">苏州</a>
-						<a href="#">天津</a>
-						<a href="#">长沙</a>
-						<a class="more" href="#">更多<i class="fa fa-sort-desc fa-lg"></i></a>
-						
-						
-					</li>
-					<li>
-						<p>工作经验 :</p>
-						<a href="#">不限</a>
-						<a href="#">应届毕业生</a>
-						<a href="#">3年及以下</a>
-						<a href="#">3-5年</a>
-						<a href="#">5-10年</a>
-						<a href="#">10年以上</a>
-						<a href="#">不要求</a>
-					</li>
-					<li>
-						<p>学历要求:</p>
-						<a href="#">不限</a>
-						<a href="#">大专</a>
-						<a href="#">本科</a>
-						<a href="#">硕士</a>
-						<a href="#">博士</a>
-						<a href="#">不要求</a>
-						
-					</li>
-					<li>
-						<p>公司规模 :</p>
-						<a href="#">不限</a>
-						<a href="#">不少于15人</a>
-						<a href="#">15-50人</a>
-						<a href="#">50-150人</a>
-						<a href="#">150-500人</a>
-						<a href="#">500-2000人</a>
-						<a href="#">2000人及以上</a>
-						
-					</li>
-					<li>
-						<p>行业领域 :</p>
-						<a href="#">不限</a>
-						<a href="#">移动互联网</a>
-						<a href="#">电商</a>
-						<a href="#">金融</a>
-						<a href="#">企业服务</a>
-						<a href="#">教育</a>
-						<a href="#">文娱|内容</a>
-						<a href="#">游戏</a>
-						<a href="#">消费生活</a>
-						<a href="#">硬件</a>
-						<a class="more" href="#">更多<i class="fa fa-sort-desc fa-lg"></i></a>
-					</li>
-					
-				</ul>
-				 <div class="shousuo"><i class="fa fa-angle-up fa-lg"></i></div>  
-			</div><!--middle-1-->
+			
+			<div class="kuang">
+					<div class="buxian" v-show="xian1">
+						<p><span>工作地点:</span><span>全国</span></p>
+						<p><span>工作经验:</span><span>不限</span></p>
+						<p><span>学历要求:</span><span>不限</span></p>
+						<p><span>融资阶段:</span><span>不限</span></p>
+						<p><span>公司规模:</span><span>不限</span></p>
+						<p><span>行业领域:</span><span>不限</span></p>
+					</div>
+			
+			
+					<div class="middle-1" v-show="yin1">
+							<ul>
+								<li :class="{write:isActive}">
+									<p>工作地点 :</p>
+									<a :class="{col:isActive1}" href="#">全国</a>
+									<a href="#">北京</a>
+									<a href="#">上海</a>
+									<a href="#">广州</a>
+									<a href="#">杭州</a>
+									<a href="#">成都</a>
+									<a href="#">南京</a>
+									<a href="#">武汉</a>
+									<a href="#">西安</a>
+									<a href="#">厦门</a>
+									<a href="#">长沙</a>
+									<a href="#">苏州</a>
+									<a href="#">天津</a>
+									<a href="#">长沙</a>
+									<a class="more" @mouseover="gengduo" @mouseout="xiaoshi" href="#">
+										更多<i v-show="xian" class="fa fa-sort-desc fa-lg"></i><i v-show="yin" class="fa fa-sort-up fa-lg"></i>
+									
+									</a>
+									<div class="city" v-show="yin" @mouseover="gengduo" @mouseout="xiaoshi">
+										  <span>重庆</span>
+										  <span>郑州</span>
+										  <span>青岛</span>
+										  <span>合肥</span>
+										  <span>福州</span>
+										  <span>济南</span>
+										  <span>大连</span>
+										  <span>珠海</span>
+										  <span>无锡</span>
+										  <span>佛山</span>
+										  <span>东莞</span>
+										  <span>宁波</span>
+										  <span>常州</span>
+										  <span>沈阳</span>
+										  <span>石家庄</span>
+										  <span>昆明</span>
+										  <span>南宁</span>
+										  <span>哈尔滨</span>
+										  <span>海口</span>
+										  <span>中山</span>
+										  <span>惠州</span>
+										  <span>贵阳</span>
+										  <span>长春</span>
+										  <span>太原</span>
+										  <span>嘉兴</span>
+										  <span>泰安</span>
+										  <span>昆山</span>
+										  <span>烟台</span>
+										  <span>全部城市 ></span>
+										
+									</div>
+										
+									
+								</li>
+								<li>
+									<p>工作经验 :</p>
+									<a href="#">不限</a>
+									<a href="#">应届毕业生</a>
+									<a href="#">3年及以下</a>
+									<a href="#">3-5年</a>
+									<a href="#">5-10年</a>
+									<a href="#">10年以上</a>
+									<a href="#">不要求</a>
+								</li>
+								<li>
+									<p>学历要求:</p>
+									<a href="#">不限</a>
+									<a href="#">大专</a>
+									<a href="#">本科</a>
+									<a href="#">硕士</a>
+									<a href="#">博士</a>
+									<a href="#">不要求</a>
+									
+								</li>
+								<li>
+									<p>公司规模 :</p>
+									<a href="#">不限</a>
+									<a href="#">不少于15人</a>
+									<a href="#">15-50人</a>
+									<a href="#">50-150人</a>
+									<a href="#">150-500人</a>
+									<a href="#">500-2000人</a>
+									<a href="#">2000人及以上</a>
+									
+								</li>
+								<li :class="{write:isActive}">
+									<p>行业领域 :</p>
+									<a href="#">不限</a>
+									<a href="#">移动互联网</a>
+									<a href="#">电商</a>
+									<a href="#">金融</a>
+									<a href="#">企业服务</a>
+									<a href="#">教育</a>
+									<a href="#">文娱|内容</a>
+									<a href="#">游戏</a>
+									<a href="#">消费生活</a>
+									<a href="#">硬件</a>
+									<a class="more" @mouseover="gengduo2" @mouseout="xiaoshi2" href="#">更多<i class="fa fa-sort-desc fa-lg"></i>
+										
+									</a>
+										<div class="job" v-show="jobyin" >
+										
+										  <span>社交</span>
+										  <span>旅游</span>
+										  <span>体育</span>
+										  <span>工具</span>
+										  <span>汽车丨出行</span>
+										  <span>物流丨运输</span>
+										  <span>医疗丨健康</span>
+										  <span>广告营销</span>
+										  <span>数据服务</span>
+										  <span>信息安全</span>
+										  <span>人工智能</span>
+										  <span>区块链</span>
+										  <span>物联网</span>
+										  <span>VR丨AR</span>
+										  <span>软件开发</span>
+										  <span>通讯电子</span>
+										  <span>房产家居</span>
+										  <span>其他</span>
+										  
+										
+									</div>
+										
+									
+								</li>
+								
+							</ul>
+							 
+			   </div><!--middle-1-->
+			    <div class="shousuo" @click="show">
+				    	<i v-show="yinbiao" class="fa fa-angle-up fa-lg"></i>
+				    	<i v-show="xianbiao" class="fa fa-angle-down fa-lg"></i>
+			    </div>  
+			</div>
+			
+			
 			<!------------------------------------------------->
 			<div class="middle-2">
 				<ul>
@@ -100,17 +181,26 @@
 			<!----------------------------------------------------->
 			<div class="middle-3">
 			
-				<ul>
-					<li>
-						<jobList>
-							<p slot="details"><router-link to="/xiangqing">硬件工程师[ 广州 ]</router-link><span>00:19发布</span></p>
-							<p slot="tag"><span>电商</span><span>电ma</span></p>
+				
+						<jobList v-for="item in nowjobArr" :imgSrc="item.cover_url">
+							<!--<p slot="details"><router-link to="/xiangqing">{{item.title}}</router-link><span>{{item.date}}发布</span></p>
+							<p slot="tag"><span>电商</span><span>电ma</span></p>-->
+							
+							  <div class="left" slot="left">
+									<p><router-link to="/xiangqing">{{item.title}} [{{item.address}}]</router-link><span>{{item.date}}发布</span></p>
+									<p><span>{{item.wage}}</span><span>{{item.workdate}}</span></p>
+									<p><span>{{item.tag}}</span></p>
+								
+									
+								</div>
+								<div class="right" slot="right">
+									<p>{{item.jobName}} <i class="fa fa-get-pocket fa-lg"></i></p>
+									<p>{{item.desc}}</p>
+									<p>{{item.fuli}}</p>
+								</div>
 						
 						</jobList>
-					</li>
-					
-					
-				</ul>
+				
 				
 			
 			</div>
@@ -135,19 +225,14 @@
 			<!------------------------------------>
 			<div class="middle-5">
 				<div class="middle-5-1">
-					<!--<span>上一页</span>
-					<span>1</span>
-					<span>2</span>
-					<span>3</span>
-					...
-					<span>30</span>
-					<span>下一页</span>-->
+				
 					
      <el-pagination
-			  background   	
-			 
+			  background
+			  :current-page.sync="currentPage"
+			  :page-size="pageSize"
 			  layout="prev, pager, next"
-			  :total="300">
+			  :total="jobArr.length">
      </el-pagination>
 				</div>
 			</div>
@@ -168,11 +253,66 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+     jobArr:[],
+     currentPage:1,
+     pageSize:7,
+     yin:false,
+     jobyin:false,
+     xian:true,
+     isActive:false,
+     isActive1:false,
+     xian1:true,
+     yin1:false,
+     xianbiao:true,
+     yinbiao:false,
     }
   },
   components:{
   	jobList,zuijin
+  },
+  mounted(){
+  	this.getJobDate();
+  },
+  computed:{
+  	nowjobArr(){
+  		return this.jobArr.slice((this.currentPage-1)*this.pageSize,this.currentPage*this.pageSize)||[];
+  	}
+  },
+  methods:{
+  	getJobDate(){
+  		this.$axios.get("../../../static/data/chuJob.json").then(res=>{
+  			console.log(res.data.recommend_one);
+  			this.jobArr=res.data.recommend_one
+  		})
+  	},
+  	gengduo(){
+  		this.yin=true;
+  	  this.xian=false;
+  		this.isActive=true;
+  		this.isActive1=true;
+  	},
+  	xiaoshi(){
+  			this.yin=false;
+  			this.xian=true;
+  			this.isActive=false;
+  			this.isActive1=false;
+  	},
+  	gengduo2(){
+  		this.jobyin=true;
+  	
+  		this.isActive=true
+  	},
+  	xiaoshi2(){
+  			this.jobyin=false;
+  			
+  			this.isActive=false
+  	},
+  	show(){
+  		this.xian1=!this.xian1;
+  		this.yin1=!this.yin1;
+  		this.xianbiao=!this.xianbiao;
+  		this.yinbiao=!this.yinbiao;
+  	}
   }
 }
 </script>
@@ -188,7 +328,14 @@ export default {
 <style scoped lang="less">
 /*------------搜索------------------*/
 
+.write{
+	background: white;
+	/*transform: rotate(180deg);*/
+}
 
+.fa-rotate-180{
+	
+}
 
 			.header1{
 				width: 100%;
@@ -235,11 +382,19 @@ export default {
  
  .more{
  	position: relative;
+ 	display: inline-block;
  	
  }
  .fa-sort-desc{
  	position: absolute;
  	top:-1px;
+ 	right: -15px;
+ 	font-size: 20px;
+ 	color:#00b38a ;
+ }
+ .fa-sort-up{
+ 	position: absolute;
+ 	top:5px;
  	right: -15px;
  	font-size: 20px;
  	color:#00b38a ;
@@ -251,11 +406,33 @@ export default {
  	margin-top: 30px;
  }
  
+ .buxian{
+ 	display: flex;
+ 	background:#fafafa ;
+ /*	border: 1px solid #ededed;*/
+ 	height: 50px;
+ 	line-height: 50px;
+ }
+ .buxian p span:nth-of-type(1){
+ 	font-weight: bolder;
+	font-size: 14px;
+	margin: 10px;
+ }
+ 
+ .buxian p span:nth-of-type(2){
+ 	font-size: 13px;
+ 	background: #00b38a;
+	color: white;
+	padding: 1px 5px;
+ }
+ 
+ 
+ 
  .middle-1 ul{
  	background: #fafafa;
  	padding: 10px;
  	font-size: 13px;
- 	border: 1px solid #ededed;
+ /*	border: 1px solid #ededed;*/
  }
  
  
@@ -278,6 +455,14 @@ export default {
 	color: white;
 	padding: 1px 5px;
 }
+
+.col{
+	background:#00b38a!important;
+	border: none!important;
+	color: white!important;
+	}
+
+
 .middle-1 ul li:nth-of-type(1) a:nth-of-type(1){
 	border: 1px solid darkgray;
 	padding: 1px 5px;
@@ -287,6 +472,24 @@ export default {
 .middle-1 ul li:nth-of-type(1){
 	position: relative;
 }
+
+.city{
+	position: absolute;
+	left: -8px;
+	bottom:-45px;
+	font-size: 13px;
+	height: 40px;
+  width: 100%;
+	background: white;
+	border-top: 1px dashed #E0E0E0;
+	padding: 5px;
+	color: black;
+	
+}
+.city span{
+	margin: 8px;
+	line-height: 20px;
+}
 .middle-1 ul li:nth-of-type(1) a:nth-of-type(15){
 	position: absolute;
 	top:0;
@@ -294,6 +497,25 @@ export default {
 }
 .middle-1 ul li:nth-of-type(5){
 	position: relative;
+}
+.job{
+	
+	position: absolute;
+	left: -10px;
+	bottom:-45px;
+	font-size: 13px;
+	height: 40px;
+  width: 101%;
+	background: white;
+	border-top: 1px dashed #E0E0E0;
+	padding: 5px;
+	color: black;
+	z-index: 3;
+		
+}
+.job span{
+	margin: 10px;
+	line-height: 25px;
 }
 .middle-1 ul li:nth-of-type(5) a:nth-of-type(11){
 	position: absolute;
@@ -305,10 +527,26 @@ export default {
 }
 
 .fa-angle-up{
-	
+	position:absolute ;
+	bottom: 3px;
+	left: 50%;
+	transform: translate(-50%);
 	color: #e4e4e4;
 	
 	
+}
+
+.fa-angle-down{
+	position:absolute ;
+	bottom: 3px;
+	left: 50%;
+	transform: translate(-50%);
+	color: #e4e4e4;
+}
+
+.kuang{
+	position: relative;
+	border: 1px solid #ededed;
 }
 .shousuo{
 	position: absolute;
@@ -323,6 +561,7 @@ export default {
 	line-height: 20px;
 	border:1px solid #ededed;
 	border-top: none;
+	z-index: 1;
 }
 
 /*-------------------------------------*/
@@ -396,13 +635,32 @@ export default {
 .middle-3 {
 	margin-top: 20px;
 }
-.middle-3 ul li{
+.middle-3 jobList{
 	background:#fafafa;
 	list-style-type: none;
 	padding: 10px;
 	border: 1px solid #ededed;
 	
 }
+.middle-3 .right{
+	/*border: 1px solid red;*/
+	width: 350px;
+}
+.middle-3 .left p:nth-of-type(1) a{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*4*/
 
 .middle-4 p{

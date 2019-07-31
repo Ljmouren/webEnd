@@ -1,5 +1,8 @@
 <template>
     <div class="item_container">
+					<div class="item_title">
+						{{item_title}}
+					</div>
 					<span class="item_title">
 						{{item_title}}
 					</span>
@@ -21,6 +24,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .item_title {
+  position: absolute;
   position: relative;
   background: white;
   color: #000000;
@@ -33,6 +37,10 @@ export default {
   display: inline-block;
   border-top: 1px solid #e5e5e5;
   color: #555;
+  box-shadow: 8px 0 4px -4px #f5f5f5;
+  margin-top: 50px;
+  width: 64%;
+  padding-right: 20px;
   padding-right: 20px;
   width: 93%;
 }

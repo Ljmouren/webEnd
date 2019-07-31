@@ -20,209 +20,65 @@
 		</el-rate></p>
 			</div>
 		</div>
-		<div class="comment_item">
+		<div class="comment_item" v-for="item in commentArr">
 			<div class="avater">
-				<img src="../../assets/img/company/CgotOVzCdtaAQpusAADMgbffW5w82.jpeg" />
+				<img :src="item.avater" />
 			</div>
 			<div class="item_right">
 				<p class="review-stars">
-					<span>王*杰</span>
-					<span class="zonghe"><span class="light">综合评分:</span><input class="rating" data-size="xs" value="4.6" data-show-caption="false" data-show-clear='false' readonly>
+					<span>{{item.name}}</span>
+					<span class="zonghe"><span class="light">综合评分:</span><el-rate v-model="item.score" disabled show-score text-color="#ff9900" score-template="{value}">
+		</el-rate>
 					</span>
-					<span><span class="light">面试职位：</span>Java(NSD)J10026 </span>
-					<span class="light">2019-06-21</span>
+					<span><span class="light">面试职位：</span>{{item.jobname}} </span>
+					<span class="light">{{item.review_date}}</span>
 				</p>
 				<p class="review-tags">
-					<span>面试官是大牛</span>
-					<span>面试官很nice</span>
+					<span v-for="item2 in item.tags">{{item2}}</span>
 				</p>
-				<div>
-					<span class="light">[面试过程]</span>面试官很牛，受虐了！
-				</div>
-				<div>
+				<p>
+					<span class="light">[面试过程]</span>{{item.interview_process}}
+				</p>
+				<p>
 					<span class="light">企业回复&nbsp;</span>
-					<span class="review-action">有用（1）</span>
-				</div>
+					<span class="review-action">有用（{{item.useful}}）</span>
+				</p>
 				<div class="review-reply">
 					<div class="triangleOut"></div>
 					<div class="triangleIn"></div>
-					<div class="reply-area">
+					<div class="reply-area" >
 						<img src="../../assets/img/company/CgotOVtpVEWAc5gqAAF9qlpglcY871.jpg" />
 						<div>
 							<span class="light">微盟&nbsp;&nbsp;·HR&nbsp;&nbsp;·人事</span>
 							<br /> 加油，你就是下一个牛人！
 						</div>
-						<span class="reply_time light">2019-06-27</span>
+						<span class="reply_time light">{{item.review_date}}</span>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="comment_item">
-			<div class="avater">
-				<img src="../../assets/img/company/CgotOVzCdtaAQpusAADMgbffW5w82.jpeg" />
-			</div>
-			<div class="item_right">
-				<p class="review-stars">
-					<span>王*杰</span>
-					<span class="zonghe"><span class="light">综合评分:</span><input class="rating" data-size="xs" value="4.6" data-show-caption="false" data-show-clear='false' readonly>
-					</span>
-					<span><span class="light">面试职位：</span>Java(NSD)J10026 </span>
-					<span class="light">2019-06-21</span>
-				</p>
-				<p class="review-tags">
-					<span>面试官是大牛</span>
-					<span>面试官很nice</span>
-				</p>
-				<div>
-					<span class="light">[面试过程]</span>面试官很牛，受虐了！
-				</div>
-				<div>
-					<span class="light">企业回复&nbsp;</span>
-					<span class="review-action">有用（1）</span>
-				</div>
-				<div class="review-reply">
-					<div class="triangleOut"></div>
-					<div class="triangleIn"></div>
-					<div class="reply-area">
-						<img src="../../assets/img/company/CgotOVtpVEWAc5gqAAF9qlpglcY871.jpg" />
-						<div>
-							<span class="light">微盟&nbsp;&nbsp;·HR&nbsp;&nbsp;·人事</span>
-							<br /> 加油，你就是下一个牛人！
-						</div>
-						<span class="reply_time light">2019-06-27</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="comment_item">
-			<div class="avater">
-				<img src="../../assets/img/company/CgotOVzCdtaAQpusAADMgbffW5w82.jpeg" />
-			</div>
-			<div class="item_right">
-				<p class="review-stars">
-					<span>王*杰</span>
-					<span class="zonghe"><span class="light">综合评分:</span><input class="rating" data-size="xs" value="4.6" data-show-caption="false" data-show-clear='false' readonly>
-					</span>
-					<span><span class="light">面试职位：</span>Java(NSD)J10026 </span>
-					<span class="light">2019-06-21</span>
-				</p>
-				<p class="review-tags">
-					<span>面试官是大牛</span>
-					<span>面试官很nice</span>
-				</p>
-				<div>
-					<span class="light">[面试过程]</span>面试官很牛，受虐了！
-				</div>
-				<div>
-					<span class="light">企业回复&nbsp;</span>
-					<span class="review-action">有用（1）</span>
-				</div>
-				<div class="review-reply">
-					<div class="triangleOut"></div>
-					<div class="triangleIn"></div>
-					<div class="reply-area">
-						<img src="../../assets/img/company/CgotOVtpVEWAc5gqAAF9qlpglcY871.jpg" />
-						<div>
-							<span class="light">微盟&nbsp;&nbsp;·HR&nbsp;&nbsp;·人事</span>
-							<br /> 加油，你就是下一个牛人！
-						</div>
-						<span class="reply_time light">2019-06-27</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="comment_item">
-			<div class="avater">
-				<img src="../../assets/img/company/CgotOVzCdtaAQpusAADMgbffW5w82.jpeg" />
-			</div>
-			<div class="item_right">
-				<p class="review-stars">
-					<span>王*杰</span>
-					<span class="zonghe"><span class="light">综合评分:</span><input class="rating" data-size="xs" value="4.6" data-show-caption="false" data-show-clear='false' readonly>
-					</span>
-					<span><span class="light">面试职位：</span>Java(NSD)J10026 </span>
-					<span class="light">2019-06-21</span>
-				</p>
-				<p class="review-tags">
-					<span>面试官是大牛</span>
-					<span>面试官很nice</span>
-				</p>
-				<div>
-					<span class="light">[面试过程]</span>面试官很牛，受虐了！
-				</div>
-				<div>
-					<span class="light">企业回复&nbsp;</span>
-					<span class="review-action">有用（1）</span>
-				</div>
-				<div class="review-reply">
-					<div class="triangleOut"></div>
-					<div class="triangleIn"></div>
-					<div class="reply-area">
-						<img src="../../assets/img/company/CgotOVtpVEWAc5gqAAF9qlpglcY871.jpg" />
-						<div>
-							<span class="light">微盟&nbsp;&nbsp;·HR&nbsp;&nbsp;·人事</span>
-							<br /> 加油，你就是下一个牛人！
-						</div>
-						<span class="reply_time light">2019-06-27</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="comment_item">
-			<div class="avater">
-				<img src="../../assets/img/company/CgotOVzCdtaAQpusAADMgbffW5w82.jpeg" />
-			</div>
-			<div class="item_right">
-				<p class="review-stars">
-					<span>王*杰</span>
-					<span class="zonghe"><span class="light">综合评分:</span><input class="rating" data-size="xs" value="4.6" data-show-caption="false" data-show-clear='false' readonly>
-					</span>
-					<span><span class="light">面试职位：</span>Java(NSD)J10026 </span>
-					<span class="light">2019-06-21</span>
-				</p>
-				<p class="review-tags">
-					<span>面试官是大牛</span>
-					<span>面试官很nice</span>
-				</p>
-				<div>
-					<span class="light">[面试过程]</span>面试官很牛，受虐了！
-				</div>
-				<div>
-					<span class="light">企业回复&nbsp;</span>
-					<span class="review-action">有用（1）</span>
-				</div>
-				<div class="review-reply">
-					<div class="triangleOut"></div>
-					<div class="triangleIn"></div>
-					<div class="reply-area">
-						<img src="../../assets/img/company/CgotOVtpVEWAc5gqAAF9qlpglcY871.jpg" />
-						<div>
-							<span class="light">微盟&nbsp;&nbsp;·HR&nbsp;&nbsp;·人事</span>
-							<br /> 加油，你就是下一个牛人！
-						</div>
-						<span class="reply_time light">2019-06-27</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<a class="view_more" href="#">查看更多</a>
+		<div class="view_more"><a href="#">查看更多</a></div>
 	</div>
 </template>
 
 <script>
-	export default {
-		 data() {
+export default {
+	data() {
       return {
         score1: 4.4,
         score2: 4.3,
         score3: 4.5,
         score4: 4.6,
+        commentArr:[]
       }
     },
-		components: {
-
-		}
+	mounted(){
+		this.$axios('https://www.easy-mock.com/mock/5d40e4c33ef5b46c529f3f79/comments/comments').
+		then(res=>{
+			this.commentArr=res.data.data;
+//			console.log(res.data.data)
+		})
+	}
 	}
 </script>
 
@@ -245,7 +101,14 @@
 	
 	.comment_top .overall {
 		color: #000000;
-		line-height: 50px;
+		line-height: 35px;
+		margin-bottom: 5px;
+		.el-icon-star-on:before{
+			font-size: 30px;
+		}
+		.el-rate__text{
+			font-size: 20px;
+		}
 	}
 	
 	.comment_top .overall .score {
@@ -259,11 +122,16 @@
 	
 	.comment_top .other_comment {
 		display: flex;
+		
+		.el-icon-star-on:before{
+			font-size: 22px;
+		}
 	}
 	
 	.comment_top .other_comment p {
 		flex: 1;
 		position: relative;
+		font-size: 14px;
 	}
 	
 	.comment_top .other_comment p .line {
@@ -280,7 +148,9 @@
 		padding: 30px 0;
 		border-bottom: 1px dashed #ccc;
 		text-align: left;
+		font-size: 15px;
 	}
+	
 	
 	.comment_item .avater img {
 		width: 50px;
@@ -290,6 +160,9 @@
 	
 	.comment_item .item_right {
 		width: 100%;
+		p{
+			padding: 5px 0;
+		}
 	}
 	
 	.comment_item .item_right .light {
@@ -371,9 +244,11 @@
 	
 	.comment_item .item_right .review-reply .reply-area div {
 		width: 78%;
-	}
-	
-	.view_more {
+	}	
+	.view_more{
+		width: 100%;
+		text-align: center;
+		a{
 		display: inline-block;
 		margin: 30px auto 0;
 		padding: 8px 15px;
@@ -382,16 +257,20 @@
 		border-radius: 4px;
 		color: #00b38a;
 		border: 1px solid #00b38a;
-	}
-	
-	.view_more:hover {
+		&:hover {
 		color: white;
 		background: #00b38a;
 	}
+	}
+		
+	}
 	
+	.none{
+		display: none;
+	}
 </style>
 <style >
-	.el-rate{
-		font-size:20px ;
-	}
+	.el-rate__icon{
+			margin-right: 0;
+		}
 </style>

@@ -1,7 +1,8 @@
 <template>
+	<div class="main">
 	<div class="main_left">
 		<!--公司产品-->
-		<item item_title='公司产品'>
+		<item item_title='公司产品' id='product'>
 			<div class="product_content" slot='product_content'>
 				<img class="product_picture" src="../../assets/img/company/Cgp3O1bPulmAMI98AACem7xeTSM951.jpg" />
 				<div class="product_details">
@@ -32,7 +33,7 @@
 			</div>
 		</item>
 		<!--公司介绍-->
-		<item item_title='公司介绍'>
+		<item item_title='公司介绍' id='company_intro'>
 			<div class="product_content company_intro" slot='product_content'>
 				<video width="480" height="270" controls="controls">
 					<source src="http://xiaoyuanstatic.lagou.com/activity/shengzhiji/video/14229-1.mp4" type="video/mp4"></source>
@@ -71,16 +72,24 @@
 		<!--轮播图-->
 		<lunbo></lunbo>
 		<!--发展历程-->
-		<item item_title='发展历程'>
+		<item item_title='发展历程' id='history'>
 			<div class="product_content" slot='product_content'>
 			<history></history>
 			</div>			
 		</item>
-		<item item_title='面试评价'>
+		<!--面试评价-->
+		<item item_title='面试评价' id='comments'>
 			<div class="product_content" slot='product_content'>
 			<comments></comments>
 			</div>			
 		</item>
+		<item item_title='公司位置' id='location'>
+			<div class="product_content" slot='product_content'>
+			<location></location>
+			</div>			
+		</item>
+	</div>
+	<c_right></c_right>
 	</div>
 </template>
 
@@ -89,9 +98,11 @@
 	import lunbo from './lunbo'
 	import history from './history'
 	import comments from './comments'
+	import location from './location'
+	import c_right from './c_right'
 	export default {
 		components: {
-			item,lunbo,history,comments
+			item,lunbo,history,comments,location,c_right
 		},
 		data(){
 			return{
@@ -109,9 +120,12 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+.main{
+	display: flex;
+	margin-top: 50px;
+}
 	.main_left {
-		box-shadow: 8px 0 4px -4px #f5f5f5;
-		margin-top: 50px;
+		box-shadow: 8px 0 4px -4px #f5f5f5;		
 		width: 64%;
 		padding-right: 20px;
 	}
@@ -133,4 +147,7 @@
 		cursor: pointer;
 	}
 	
+</style>
+<style>
+
 </style>

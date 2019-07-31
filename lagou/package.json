@@ -16,10 +16,18 @@
   "dependencies": {
     "axios": "^0.19.0",
     "element-ui": "^2.11.1",
+<<<<<<< HEAD
+=======
+    "font-awesome": "^4.7.0",
+>>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "swiper": "^4.5.0",
     "vue": "^2.5.2",
+<<<<<<< HEAD
+=======
+    "vue-awesome-swiper": "^3.1.3",
+>>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
     "vue-baidu-map": "^0.21.22",
     "vue-router": "^3.0.1",
     "vue-star-rating": "^1.6.1"
@@ -59,6 +67,10 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
+<<<<<<< HEAD
+=======
+    "jquery": "^3.4.1",
+>>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
     "nightwatch": "^0.9.12",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",

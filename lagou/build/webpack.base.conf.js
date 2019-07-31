@@ -1,4 +1,8 @@
 'use strict'
+<<<<<<< HEAD
+=======
+var webpack = require("webpack") 
+>>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
@@ -88,5 +92,16 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
+<<<<<<< HEAD
   }
+=======
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery"
+    })
+  ]
+>>>>>>> 2d5deab3f3cbe41fe5dd1314282d7693e858e0a6
 }

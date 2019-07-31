@@ -36,7 +36,12 @@ export default new Router({
     path: '/Register',
     name: 'Register',
     component: Register
-   },   
+   }, 
+   {
+      path: '/Login',
+      name: 'Login',
+      component: HelloWorld
+    },
    {
       path: '/jobHome',
       name: 'jobHome',

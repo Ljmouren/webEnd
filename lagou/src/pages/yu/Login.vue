@@ -11,11 +11,11 @@
 				</div>
 				<form>
 					<p class="login-style">
-					<a class="password" @click="layout='password'">密码登录</a>
+					<a class="password" @click="layout='password'" :class="{active:xiahuaxian}">密码登录</a>
 					<a class="yanzhengma" @click="layout='yanzhengma'">验证码登录</a>
 				</p>
 				<p class="passlogin" v-if="layout=='password'">
-					<Form>
+					<Form>	
 						<input type="text" placeholder="请输入常用手机号/邮箱" slot="ainput" class="input1">
 						<input type="text" placeholder="请输入密码" slot="binput" class="input2">
 						<a href="#" slot="wangjimima" class="wangjimima">忘记密码？</a>
@@ -25,15 +25,14 @@
 					<p class="yzmlogin" v-if="layout=='yanzhengma'">
 					<Form>
 						<span slot="phonenum" class="phonenum">0086</span>
-						<input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1">
+						<input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone">
 						<input type="text" placeholder="请输入验证码" slot="binput" class="input2">
-						<a class="huoquyzm">获取验证码</a>
-						<input type="submit" value="登录" slot="btn" class="btn"></input>
+						<a class="huoquyzm" slot="wangjimima" :disabled="disabled" @click="sendcode">{{btntxt}}</a>
+						<input type="submit" value="登录" slot="btn" class="btn" @click="goshouye"></input>
 					</Form>
 				</p>
 				</form>
-				
-				<div class="change">
+			<div class="change">
 					<img src="img/timg.gif">
 					<p>微信扫一扫，快速登录</p>
 				</div>
@@ -51,6 +50,9 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
 </template>
 
 <script>
@@ -59,16 +61,49 @@
 		name: 'HelloWorld',
 		data() {
 			return {
-				layout: 'password'
-			}
-		},
+				layout: 'password',
+				   phone:this.phone,
+				   disabled:false,
+				   time:0,    
+				   btntxt:"获取验证码",
+				   xiahuaxian:true
+			    }	
+		    },
 		components: {
 			Form
 		},
 		methods:{
+			
+			 goshouye(){ 
+          	  this.$router.push('/index')
+          },
 			goreg(){
   		     this.$router.push('/Register')
+         },
+         sendcode(){
+         	var reg=11&& /^[1][3,4,5,6,7,8][0-9]{9}$/;
+         	if(this.phone==''){
+         		alert("请输入手机号码");
+         	}else if(!reg.test(this.phone)){
+         		alert("手机格式不正确");
+         	}else{
+         		this.time=60;
+         		this.timer();
+         		this.disabled=true;
+         		
          	}
+         },
+         timer(){
+         	if(this.time>0){
+         		this.time--;
+         		this.btntxt=this.time+"s后重新获取";
+         		setTimeout(this.timer,1000);
+         	}else{
+         		this.time=0;
+         		this.btntxt="获取验证码";
+         		this.disabled=false;
+         	}
+         }
 		}
 	}
 </script>
@@ -131,11 +166,13 @@
 		text-align: center;
 	}
 	.huoquyzm{
+		display: inline-block;
 		color:#00b3a7;
 		font-size: 14px;
 		position: absolute;
 		right:15px;
 		top:120px;
+		
 	}
 	.phonenum{
 		position: absolute;
@@ -268,6 +305,8 @@ form .btn{
 .pc-login{
 	background: url(//www.lgstatic.com/passport/static/common/static/img/mobile-login_438f9b2.svg) left center no-repeat;
 }
-
+.active{
+	border-bottom: 1px orange solid;
+}
 
 </style>

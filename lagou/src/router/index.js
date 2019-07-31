@@ -18,13 +18,11 @@ export default new Router({
     },
 	{
 		path: '/Index',
-		path: '/',
 		name: 'Index',
 		component: Index
 	},
 	{
       path: '/HelloWorld',
-      path: '/',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -37,13 +35,7 @@ export default new Router({
     path: '/Register',
     name: 'Register',
     component: Register
-   },
-    {
-      path: '/Login',
-      name: 'Login',
-      component: Login
-    },
-    
+   },   
    {
       path: '/jobHome',
       name: 'jobHome',

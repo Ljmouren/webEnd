@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 import Login from '@/pages/yu/Login'
 import Register from '@/pages/yu/Register'
 import Index from '@/pages/LJ/index'

@@ -8,14 +8,9 @@ import router from './router'
 import Axios from 'axios'
 import BaiDuMap from 'vue-baidu-map'
 import StarRating from 'vue-star-rating'
-<<<<<<< HEAD
 import $ from 'jquery'
-=======
-
-
-
->>>>>>> 9038484c734a098e88fdbf551010e0d1dcef3a08
 import 'font-awesome/css/font-awesome.css';
+
 Vue.use(ElementUI)
 Vue.prototype.$axios=Axios
 Vue.component('star-rating', StarRating);

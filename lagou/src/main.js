@@ -9,7 +9,7 @@ import Axios from 'axios'
 import BaiDuMap from 'vue-baidu-map'
 import StarRating from 'vue-star-rating'
 import $ from 'jquery'
-import 'font-awesome/css/font-awesome.css';
+import 'font-awesome/css/font-awesome.css'
 
 Vue.use(ElementUI)
 Vue.prototype.$axios=Axios

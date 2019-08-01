@@ -19,6 +19,11 @@
 		</div>
    <xiangTop></xiangTop>
    <xiangMiddle></xiangMiddle>
+   
+   
+   <div class="huojiankuang" v-show="isshow" @click="change" :class="{up:ischange}"></div>
+   
+   
   <!-- <xiangBottom></xiangBottom>-->
   </div>
 </template>
@@ -32,6 +37,8 @@ export default {
   data () {
     return {
     isFixed:"",
+    isshow:false,
+    ischange:false
    
     }
   },
@@ -39,7 +46,8 @@ export default {
   	xiangTop,xiangMiddle,xiangBottom
   },
   mounted(){
-    window.addEventListener('scroll',this.handleScroll) // 监听滚动事件，然后用handleScroll这个方法进行相应的处理
+    window.addEventListener('scroll',this.handleScroll);// 监听滚动事件，然后用handleScroll这个方法进行相应的处理
+    window.addEventListener('scroll',this.hujianScroll)
   },
   methods:{
   	handleScroll(){
@@ -47,7 +55,41 @@ export default {
     let offsetTop = document.querySelector('.toubu').offsetHeight;  // 要滚动到顶部吸附的元素的偏移量
     this.isFixed = scrollTop > offsetTop ? true : false;  // 如果滚动到顶部了，this.isFixed就为true
     
-  	}
+  	},
+  	
+  	change(){
+  		this.ischange=true;
+  		  const that = this;
+  		  let timer=setInterval(function(){
+		        let ispeed = Math.floor(-that.scrollTop / 4);
+		        document.documentElement.scrollTop = document.body.scrollTop = that.scrollTop +ispeed;
+		        if (that.scrollTop=== 0) {
+		          clearInterval(timer)
+        }
+  		},10);
+  		
+  		if(scrollTop===0){
+  			this.isshow=false;
+  		}
+  	},
+  	hujianScroll(){
+       
+  	    	
+  		    const that = this;
+			    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+			    that.scrollTop = scrollTop
+			    if (that.scrollTop > 60) {
+			      that.isshow = true;
+			     
+			    } else {
+			      that.isshow = false
+			    
+			    }
+			    
+			    if(that.scrollTop==0){
+			    		this.ischange=false;
+			    }
+  		},
   }
 }
 </script>
@@ -131,5 +173,19 @@ export default {
 /*.tou-2-2 p:nth-of-type(3){
 	text-align: center;
 }*/
+.huojiankuang{
+	
+	
+	width: 30px;
+	height: 48px;
+  position: fixed;
+	bottom: 150px;
+	right: 250px;
+	background: url(../../assets/img/company/backtop-new_0e4bcbc.png) no-repeat;
+	/*background-position-x: -37px;*/
+}
+.up{
+	 background-position-x: -37px;
+}
 
 </style>

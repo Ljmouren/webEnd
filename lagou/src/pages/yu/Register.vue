@@ -32,34 +32,14 @@
 					</div>
 					<div class="fenlei">
 						<div class="leftfenlei">
-<<<<<<< HEAD
 							<ul v-for="(item,index) in stylelist" @click="fn(index)">
-=======
-							<ul v-for="(item,index) in stylelist">
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 								<li :class="{active:active==item.title}" @click="selected(item.title)">{{item.title}}</li>
 							</ul>
 						</div>
 						<div class="rightfenlei">
-<<<<<<< HEAD
 							<div v-for="(item,index) in imgUrl" >
 								<img :src="item.url">
 							</div>
-=======
-							<img src="https://www.lgstatic.com/i/image2/M01/09/0D/CgoB5lyZz_iAP3lEAAARZjW66CE243.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/0D/CgoB5lyZ0AuAc_hKAAAT2ScFv40003.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/31/CgotOVyZ0cSAZ1xfAAAR-7bVFi0762.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/12/CgoB5lyZ0lGARfM9AAATkKfurJk459.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/0E/CgoB5lyZ0DyAGQmZAAAmLMeG-yQ826.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/2E/CgotOVyZ0FOAPt7pAAAY1ZpZkZo069.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/0E/CgoB5lyZ0EiAGlFSAAAmjZCWHDk271.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/0E/CgoB5lyZ0GGAMSfPAAAlGMjnQkw947.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/45/BC/CgoB5l0Afv6AT-tiAAAVE32Bpvg346.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/0D/CgoB5lyZ0CWACn8DAAASZGAJ-Jk086.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/0E/CgoB5lyZ0GmACBv1AAAxBPLwggM095.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/2E/CgotOVyZ0C6AGUF6AAAV_hCCTb8669.png">
-							<img src="https://www.lgstatic.com/i/image2/M01/09/32/CgotOVyZ0kOAJ5gzAAAQP-FU9NA769.png">
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 						</div>
 					</div>
 				</div>
@@ -69,7 +49,6 @@
 						<p>
 							<Form>
 								<span slot="phonenum" class="updowm">0086</span>
-<<<<<<< HEAD
 						         <input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone" @blur="sendcode">
 						          <p class="tishi" slot="tishik1" :class="{xian:tiShi!=''}">{{tiShi}}</p>
 								<input type="password" placeholder="请设置登录密码" slot="binput" class="dierge" v-model="pwd"  @blur="chpw">
@@ -77,15 +56,6 @@
 							</Form>
 						</p>
 						  <el-button type="text" @click="open" class="zhuce">立即注册</el-button>
-=======
-						        <input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone">
-								<input type="text" placeholder="请输入手机验证码" slot="binput" class="dierge" >
-								<span class="getcode" slot="wangjimima" @click="sendcode" :disabled="disabled">{{btntxt}}</span>
-							</Form>
-						</p>
-
-						<a href="#" class="zhuce">立即注册</a>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 						<p class="xieyi">注册代表你已同意
 							<a href="#">「拉勾用户协议」</a>
 						</p>
@@ -167,7 +137,6 @@
 				{title:'销售'},
 				],
 				content: '',
-<<<<<<< HEAD
                 active:0,        // 左侧li点击那个那个高亮
                 isShow:false,    //右上角二维码
                 disabled:false,  // 获取验证码部分
@@ -180,21 +149,12 @@
                 pwd:this.pwd,     //验证密码部分
                 isGo:false,   //点击注册按钮
                 
-=======
-                active:'',
-                isShow:false,
-                disabled:false,  // 获取验证码部分
-                time:0,            // 获取验证码部分
-                btntxt:"获取验证码",   // 获取验证码部分
-                phone:this.phone    // 获取验证码部分
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			}
 		},
 		components: {
 			Form
 		},
 		methods: {
-<<<<<<< HEAD
 			// 左侧图片渲染
 			imgload(){
 				this.$axios.get('https://www.easy-mock.com/mock/5d424169882199777987772e/getdata')
@@ -218,14 +178,11 @@
 				this.indes=index;
 				this.imgload();
 			},
-=======
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			// 验证手机号码部分
 			//..........
 			sendcode(){
 				var reg=11&& /^[1][3,4,5,6,7,8][0-9]{9}$/;
 				if(this.phone==''){
-<<<<<<< HEAD
 					this.tiShi="请输入手机号码"
 				}else if(!reg.test(this.phone)){
 					this.tiShi="手机格式不正确"
@@ -260,41 +217,13 @@
             this.$router.push('/Register')
           });
       },
-=======
-					alert("请输入手机号码")
-				}else if(!reg.test(this.phone)){
-					alert("手机格式不正确")
-				}
-				else{
-					this.time=60;
-					this.disabled=true;
-					this.timer();
-				}
-			},
-			timer(){
-				if(this.time>0){
-					this.time--;
-					this.btntxt=this.time+"s后重新获取";
-					setTimeout(this.timer,1000);
-				}else{
-					this.time=0;
-					this.btntxt="获取验证码";
-					this.disabled=false;
-				}
-			},
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			goto() {
 				this.$router.push('/Login')
 			},
 			showw(){
-<<<<<<< HEAD
 					this.isShow = !this.isShow;
 					},
 					//点击高亮显示
-=======
-						this.isShow = !this.isShow;
-					},
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			selected(title){
                       this.active = title;
                      },
@@ -321,7 +250,6 @@
 </script>
 
 <style scoped lang="less">
-<<<<<<< HEAD
 .xian{
 	border-top:1px #fd5f39 solid;
 	width: 100%;
@@ -339,8 +267,6 @@
 	padding:8px 0px 0px 0px;
 	display: inline-block;
 	}
-=======
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	* {
 		padding: 0;
 		margin: 0;
@@ -507,10 +433,7 @@
 		margin-top: 10px;
 		background: #00906f;
 		border-radius:4px;
-<<<<<<< HEAD
 		box-sizing: border-box;
-=======
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	}
 	.active {
 		border-radius: 4px;
@@ -524,10 +447,7 @@
 	}
 	
 	.rightfenlei {
-<<<<<<< HEAD
 		margin-top:7px;
-=======
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		box-sizing: border-box;
 		display: flex;
 		flex-wrap: wrap;
@@ -585,25 +505,7 @@
 		color: #00b38a;
 	}
 	
-<<<<<<< HEAD
 		.rightmiddle .input1-1 {
-=======
-	.getcode {
-		position: absolute;
-		right: 0;
-		top: 75px;
-		display: inline-block;
-		height: 38px;
-		font-size: 14px;
-		line-height: 38px;
-		color: #00b38a;
-		text-align: center;
-		text-decoration: none;
-		border-radius: 3px;
-	}
-	
-	.rightmiddle .input1-1 {
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		text-indent:4.5rem;
 		font-weight: lighter;
 		width: 100%;
@@ -617,10 +519,6 @@
 	}
 	
 	.rightmiddle .dierge {
-<<<<<<< HEAD
-=======
-		margin-top: 40px;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		font-weight: lighter;
 		width: 100%;
 		height: 38px;
@@ -664,12 +562,7 @@
 	}
 	
 	.zhuce {
-<<<<<<< HEAD
 		width: 100%;
-=======
-		margin-top: 40px;
-		display: block;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		height: 48px;
 		line-height: 48px;
 		margin-bottom: 16px;

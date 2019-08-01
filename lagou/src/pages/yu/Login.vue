@@ -5,7 +5,6 @@
 		</div>
 		<div class="section">
 			<div class="leftsec">
-<<<<<<< HEAD
 				<div class="bg-slogo" @click="changel='saomiao'">
 					<div class="leftimg"></div>
 					<div class="weichat-login"></div>
@@ -30,21 +29,6 @@
 						<p class="tishi" slot="tishik1" :class="{xian:tiShi!=''}">{{tiShi}}</p>
 						<input type="password" placeholder="请输入密码" slot="binput" class="input2" v-model="pwd"  @blur="chpw">
 					    <p class="tishi" slot="tishik2">{{tiShi3}}</p>
-=======
-				<div class="bg-slogo">
-					<div class="leftimg"></div>
-					<div class="weichat-login"></div>
-				</div>
-				<form>
-					<p class="login-style">
-					<a class="password" @click="layout='password'" :class="{active:xiahuaxian}">密码登录</a>
-					<a class="yanzhengma" @click="layout='yanzhengma'">验证码登录</a>
-				</p>
-				<p class="passlogin" v-if="layout=='password'">
-					<Form>	
-						<input type="text" placeholder="请输入常用手机号/邮箱" slot="ainput" class="input1">
-						<input type="text" placeholder="请输入密码" slot="binput" class="input2">
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 						<a href="#" slot="wangjimima" class="wangjimima">忘记密码？</a>
 						<input type="submit" value="登录" slot="btn" class="btn"></input>
 					</Form>
@@ -52,7 +36,6 @@
 					<p class="yzmlogin" v-if="layout=='yanzhengma'">
 					<Form>
 						<span slot="phonenum" class="phonenum">0086</span>
-<<<<<<< HEAD
 						<input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone" @blur="ckph">
 						  <p class="tishi" slot="tishik1" :class="{xian:tiShi!=''}">{{tiShi}}</p>
 						<input type="text" placeholder="请输入验证码" slot="binput" class="input2-2" v-model="phoneyz" @blur="ckyzm">
@@ -63,20 +46,6 @@
 				</p>
 				</form>
 			
-=======
-						<input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone">
-						<input type="text" placeholder="请输入验证码" slot="binput" class="input2">
-						<a class="huoquyzm" slot="wangjimima" :disabled="disabled" @click="sendcode">{{btntxt}}</a>
-						<input type="submit" value="登录" slot="btn" class="btn" @click="goshouye"></input>
-					</Form>
-				</p>
-				</form>
-			<div class="change">
-					<img src="img/timg.gif">
-					<p>微信扫一扫，快速登录</p>
-				</div>
-			</div>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<div class="rightsec">
 				<div class="total">
 					<h5>还没有账号：</h5>
@@ -102,7 +71,6 @@
 		data() {
 			return {
 				layout: 'password',
-<<<<<<< HEAD
 				  tiShi:'',         // 获取验证码部分
                   tiShi2:'',  // 获取验证码部分
                   tiShi3:'', 
@@ -114,13 +82,6 @@
 				   btntxt:"获取验证码",
 				   xiahuaxian:true ,//登录方式的绿色下划线
 				   changel:'zhanghao',
-=======
-				   phone:this.phone,
-				   disabled:false,
-				   time:0,    
-				   btntxt:"获取验证码",
-				   xiahuaxian:true
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			    }	
 		    },
 		components: {
@@ -134,7 +95,6 @@
 			goreg(){
   		     this.$router.push('/Register')
          },
-<<<<<<< HEAD
          lost(){
 					this.tiShi='';
                },
@@ -166,21 +126,6 @@
 					this.tiShi2='';
 				}
 			      },
-=======
-         sendcode(){
-         	var reg=11&& /^[1][3,4,5,6,7,8][0-9]{9}$/;
-         	if(this.phone==''){
-         		alert("请输入手机号码");
-         	}else if(!reg.test(this.phone)){
-         		alert("手机格式不正确");
-         	}else{
-         		this.time=60;
-         		this.timer();
-         		this.disabled=true;
-         		
-         	}
-         },
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
          timer(){
          	if(this.time>0){
          		this.time--;
@@ -190,7 +135,6 @@
          		this.time=0;
          		this.btntxt="获取验证码";
          		this.disabled=false;
-<<<<<<< HEAD
          		this.tiShi='';
 				this.tiShi2='';
          	}
@@ -221,17 +165,10 @@
 		}
 	}
 		}
-=======
-         	}
-         }
-		}
-	}
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-<<<<<<< HEAD
 	*{	padding: 0;
 		margin:0;
 	}
@@ -242,11 +179,6 @@
 	color:#fd5f39;
 	display: inline-block;
 	}
-=======
-	*{		padding: 0;
-		margin:0;
-		}
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 .header{
 		height: 360px;
 		position: relative;
@@ -305,11 +237,7 @@
 		font-size: 14px;
 		position: absolute;
 		right:15px;
-<<<<<<< HEAD
 		top:115px;
-=======
-		top:120px;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		
 	}
 	.phonenum{
@@ -335,7 +263,6 @@
 		height: 240px;
 	}
 	.input1-1{
-<<<<<<< HEAD
 		text-indent:4.5rem;
 	}
 	input{
@@ -343,24 +270,11 @@
 		height:38px;
          outline: 0;
          font-size: 15px;
-=======
-		text-indent:4rem;
-	}
-	input{
-		margin-top:15px;
-		width: 290px;
-		height: 47px;
-         outline: 0;
-         font-size: 14px;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
         border:none;
         border-bottom: 1px solid #ebebeb;
 	}
 .login-style a{
-<<<<<<< HEAD
 	  cursor:pointer;
-=======
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	  font-weight: bolder;
 	   font-size: 18px;
 	   color:#666;
@@ -369,11 +283,7 @@
        padding:0px 30px 10px 30px;
 }
 	.login-style{
-<<<<<<< HEAD
 		margin-bottom:26px;
-=======
-		margin-bottom:5px;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	}
 .wangjimima{
 	text-decoration: none;
@@ -383,10 +293,7 @@
 	margin: 10px 0;
 }	
 form .btn{
-<<<<<<< HEAD
 	height: 45px;
-=======
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	font-size: 20px;
 	position: absolute;
 	bottom: 0px;
@@ -458,7 +365,6 @@ form .btn{
 .change img{
 	width: 200px;
 	height: 200px;
-<<<<<<< HEAD
 } 
 .pc-img{
 	    width: 52px;
@@ -483,17 +389,4 @@ form .btn{
 
 
 
-=======
-}
-.pc-img{
-	background: url(//www.lgstatic.com/passport/static/common/static/img/pc-normal_98450bc.svg) left center no-repeat;
-}
-.pc-login{
-	background: url(//www.lgstatic.com/passport/static/common/static/img/mobile-login_438f9b2.svg) left center no-repeat;
-}
-.active{
-	border-bottom: 1px orange solid;
-}
-
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 </style>

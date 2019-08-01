@@ -2,7 +2,11 @@
 	<div class="searchwork">
 		<div class="box">
 			<div class="form">
+<<<<<<< HEAD
+				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}" />
+=======
 				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}"/>
+>>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 				<button class="search-btn">搜索</button>
 			</div>
 			<div class="list">
@@ -18,21 +22,20 @@
 		</div>
 	</div>
 </template>
-
 <script>
-export default {
-	data(){
-		return{
-			isshow:false
-		}
-	},
-}
+	export default {
+		data() {
+			return {
+				isshow: false
+			}
+		},
+	}
 </script>
 
 <style lang="less" scoped>
-.foc{
-	border: 1px solid #00b38a!important;
-}
+	.foc {
+		border: 1px solid #00b38a!important;
+	}
 	.searchwork {
 		width: 100%;
 		height: 132px;
@@ -78,7 +81,7 @@ export default {
 					color: #00b38a;
 					padding: 0 8px;
 					text-decoration: none;
-					&:hover{
+					&:hover {
 						text-decoration: underline;
 					}
 				}

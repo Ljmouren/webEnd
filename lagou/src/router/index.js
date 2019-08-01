@@ -8,17 +8,12 @@ import company_home from '../pages/tang/company_home'
 import company from '../pages/LH/company'
 import jobHome from '@/pages/chu/jobHome'
 import xiangqing from '@/pages/chu/xiangqing'
-import company from '@/pages/LH/company'
 Vue.use(Router)
 
 export default new Router({
 	routes: [
 	{
-<<<<<<< HEAD
-		path: '/index',
-=======
 		path: '/Index',
->>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 		name: 'Index',
 		component: Index
 	},
@@ -56,11 +51,6 @@ export default new Router({
       path: '/xiangqing',
       name: 'xiangqing',
       component: xiangqing
-    },
-    {
-      path: '/company',
-      name: 'company',
-      component: company
     }
 	]
 })

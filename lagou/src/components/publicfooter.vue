@@ -179,6 +179,7 @@ a{
 .public-footer .copyright {
   clear: both;
   margin: 60px auto;
+  margin-bottom:0px;
   color: #999;
   font-size: 14px;
   line-height: 12px;

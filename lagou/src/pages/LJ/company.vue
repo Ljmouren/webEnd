@@ -36,9 +36,6 @@
 			<div class="a">
 
 				<button class="list-more" @click="fn()" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
-
-				<button class="list-more" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
-
 			</div>
 		</div>
 	</div>

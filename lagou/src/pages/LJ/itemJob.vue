@@ -2,13 +2,8 @@
 	<div class="itemjob">
 		<div class="itemBig">
 			<ul class="jobTab">
-<<<<<<< HEAD
 				<li @click="layout='hot'" :class="{active:layout=='hot'}">24Hour热门</li>
 				<li  @click="layout='now'" :class="{active:layout=='now'}">最新职位</li>
-=======
-				<li class="active">24Hour热门</li>
-				<li>最新职位</li>
->>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 			</ul>
 			<div class="hot_tips" :class="{show:isshow}">
 				<span class="icon"><i>?</i></span>
@@ -16,7 +11,6 @@
 				<span class="know" @click="change()">我知道了</span>
 			</div>
 			<div class="itembox">
-<<<<<<< HEAD
 				<ul class="items" v-for="item in arr" v-show="layout=='hot'">
 					<li class="itemsli">
 						<div class="itemt">
@@ -39,9 +33,6 @@
 					</li>
 				</ul>
 				<ul class="items" v-for="item in arr" v-show="layout=='now'">
-=======
-				<ul class="items" v-for="item in arr">
->>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 					<li class="itemsli">
 						<div class="itemt">
 							<p>
@@ -63,15 +54,10 @@
 					</li>
 				</ul>
 				<div class="a">
-<<<<<<< HEAD
 					<button class="list-more" @click="fn()" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
-=======
-					<button class="list-more" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
->>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 				</div>
 			</div>
-		</div>
-
+		</div></div>
 	</div>
 </template>
 
@@ -81,12 +67,9 @@
 			return {
 				arr: [],
 				isshow: false,
-<<<<<<< HEAD
 				isS: false,
-				layout:'hot'
-=======
+				layout:'hot',
 				isS: false
->>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 			}
 		},
 		mounted() {
@@ -107,12 +90,9 @@
 			yichu() {
 				this.isS = false;
 			},
-<<<<<<< HEAD
 			fn(){
 				this.$router.push('/jobHome');
 			}
-=======
->>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 		}
 	}
 </script>

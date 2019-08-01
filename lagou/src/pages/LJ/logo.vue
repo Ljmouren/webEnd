@@ -54,7 +54,6 @@
 					}
 				}
 			},
-<<<<<<< HEAD
 			login(){
 				if(this.send){
 					this.$router.push('/Login')
@@ -64,14 +63,12 @@
 					this.show3=true;
 				}
 			}
-=======
 //			login(){
 //				if(){
 //					
 //				}
 //				this.$router.push('/Login')
 //			}
->>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 		}
 	}
 </script>

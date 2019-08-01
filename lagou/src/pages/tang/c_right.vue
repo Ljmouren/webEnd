@@ -89,17 +89,17 @@
 					<li>
 						<i class="el-icon-timer"></i>
 						<span>成立时间</span>
-						<p>上海微盟企业发展有限公司</p>
+						<p>2014-09-10</p>
 					</li>
 					<li>
 						<i class="el-icon-money"></i>
 						<span>注册资本</span>
-						<p>上海微盟企业发展有限公司</p>
+						<p>92935.2237万人民币</p>
 					</li>
 					<li>
 						<i class="el-icon-coordinate"></i>
 						<span>法人代表</span>
-						<p>上海微盟企业发展有限公司</p>
+						<p>孙涛勇</p>
 					</li>
 				</ul>
 				<div class="info-more">

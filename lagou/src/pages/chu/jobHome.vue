@@ -182,7 +182,7 @@
 			<div class="middle-3">
 			
 				
-						<jobList v-for="item in nowjobArr" :imgSrc="item.cover_url">
+						<jobList v-for="item in nowjobArr" :imgSrc="item.cover_url" :key='index'>
 							<!--<p slot="details"><router-link to="/xiangqing">{{item.title}}</router-link><span>{{item.date}}发布</span></p>
 							<p slot="tag"><span>电商</span><span>电ma</span></p>-->
 							
@@ -199,9 +199,7 @@
 									<p>{{item.fuli}}</p>
 								</div>
 						
-						</jobList>
-				
-				
+						</jobList>								
 			
 			</div>
 			<!------------------------------------------------------>

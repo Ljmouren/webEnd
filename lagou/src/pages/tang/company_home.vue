@@ -4,7 +4,7 @@
     <topH>
     <div slot='first'>
     	<Contents></Contents>
-    	<publicfooter></publicfooter> 
+    	<cfooter></cfooter> 
     </div>
     <div slot='second' class="main">
     	招聘职位
@@ -16,22 +16,25 @@
     </div>
     <div slot='fourth'>
     	公司问答
-    	<publicfooter></publicfooter> 
+    	<publicfooter class='modify'></publicfooter> 
     </div>
     </topH>
+   <backtop></backtop>
    
   </div>
 </template>
 
 <script>
 	import publictop from '../../components/publictop'
-import publicfooter from '../../components/publicfooter'
+	import publicfooter from '../../components/publicfooter'
+import cfooter from './cfooter'
 import topH from './topH'
 import Contents from './Contents'
 import c_right from './c_right'
+import backtop from './backTop'
 export default {
   components:{
-  	publictop,publicfooter,topH,Contents,c_right
+  	publictop,publicfooter,topH,Contents,c_right,backtop,cfooter
   }
 }
 </script>
@@ -41,4 +44,5 @@ export default {
 .commen{
 	margin-top: 50px;
 }
+
 </style>

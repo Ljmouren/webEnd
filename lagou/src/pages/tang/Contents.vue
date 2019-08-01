@@ -123,7 +123,11 @@
 .main{
 	display: flex;
 	margin-top: 50px;
-}
+		width: 1200px;
+		max-width: 1200px;
+		/*margin: 0 auto;*/
+	}
+
 	.main_left {
 		box-shadow: 8px 0 4px -4px #f5f5f5;		
 		width: 64%;

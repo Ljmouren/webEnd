@@ -38,6 +38,9 @@
 									<a href="#">苏州</a>
 									<a href="#">天津</a>
 									<a href="#">长沙</a>
+									
+									
+									 
 									<a class="more" @mouseover="gengduo" @mouseout="xiaoshi" href="#">
 										更多<i v-show="xian" class="fa fa-sort-desc fa-lg"></i><i v-show="yin" class="fa fa-sort-up fa-lg"></i>
 									
@@ -74,7 +77,9 @@
 										  <span>全部城市 ></span>
 										
 									</div>
-										
+<!------------------------------------------------------------------->			
+        
+<!---------------------------------------------------------------------------->
 									
 								</li>
 								<li>
@@ -182,7 +187,7 @@
 			<div class="middle-3">
 			
 				
-						<jobList v-for="item in nowjobArr" :imgSrc="item.cover_url">
+						<jobList v-for="item in nowjobArr" :imgSrc="item.cover_url" :key="index">
 							<!--<p slot="details"><router-link to="/xiangqing">{{item.title}}</router-link><span>{{item.date}}发布</span></p>
 							<p slot="tag"><span>电商</span><span>电ma</span></p>-->
 							
@@ -280,9 +285,9 @@ export default {
   },
   methods:{
   	getJobDate(){
-  		this.$axios.get("../../../static/data/chuJob.json").then(res=>{
-  			console.log(res.data.recommend_one);
-  			this.jobArr=res.data.recommend_one
+  		this.$axios.get("https://www.easy-mock.com/mock/5d40e4603ef5b46c529f3f54/temp/shuju").then(res=>{
+  			console.log(res.data.data.recommend_one);
+  			this.jobArr=res.data.data.recommend_one
   		})
   	},
   	gengduo(){
@@ -711,8 +716,6 @@ export default {
           color:white;
           background:#00b38a ;
 }
-/*right*/
-/*.middle{
-	position: relative;
-}*/
+
+
 </style>

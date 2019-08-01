@@ -22,7 +22,10 @@
 						   		<li>6、能够独立完成迭代产品的硬件设计，有海思芯片硬件设计量产经验；</li>
 						   		<li>7、有汽车电子行业经验优先。</li>
 						   		<li><h3>工作地址</h3></li>
-						   		<li class="dizhi"><span>深圳</span><span>-</span><span>南山区</span><span>-</span><span>前海</span><span>-</span><span>南海大道创意大厦</span><a>查看地图</a></li>
+						   		<li class="dizhi"><span>深圳</span><span>-</span><span>南山区</span><span>-</span><span>前海</span><span>-</span><span>南海大道创意大厦</span><a @click="chakanMap">查看地图</a></li>
+						   		<li class="ditu">
+						   			 <baidu-map class="map" v-show="xian" :center="center" :zoom="zoom" @ready="handler"></baidu-map>
+						   		</li>
 						   		<li> <h3>职位发布者:</h3></li>
 						   		<li class="fabu">
 						   			
@@ -127,32 +130,52 @@ export default {
   data () {
     return {
      jobArr1:[],
+     center: {lng: 0, lat: 0},
+      zoom: 3,
+      xian:false,
+     
     }
   },
   mounted(){
   	this.getJobDate();
   },
-  computed:{
-  	jobArr2(){
-  		return this.jobArr1.slice(0,7);
-  	},
-  	jobArr3(){
-  		return this.jobArr1.slice(8,12);
-  	},
-  },
+computed:{
+	jobArr2(){
+		var count=Math.floor(Math.random()*20);
+		console.log(count);
+		return this.jobArr1.slice(count,count+7);
+	},
+	jobArr3(){
+		var count=Math.floor(Math.random()*23);
+		return this.jobArr1.slice(count,count+4);
+	},
+},
   methods:{
   	getJobDate(){
-  		this.$axios.get("../../../static/data/chuJob.json").then(res=>{
-  			console.log(res.data.recommend_one);
-  			this.jobArr1=res.data.recommend_one
+  		this.$axios.get("https://www.easy-mock.com/mock/5d40e4603ef5b46c529f3f54/temp/shuju").then(res=>{
+  			console.log(res.data.data.recommend_one);
+			  this.jobArr1=res.data.data.recommend_one;
   		})
   	},
+  	 handler ({BMap, map}) {
+      console.log(BMap, map)
+      this.center.lng = 116.404
+      this.center.lat = 39.915
+      this.zoom = 15
+    },
+    chakanMap(){
+    	this.xian=!this.xian
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+.map {
+  width: 100%;
+  height: 400px;
+}
 h3{
 	font-weight: bold;
 	

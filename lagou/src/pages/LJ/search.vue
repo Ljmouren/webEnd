@@ -1,10 +1,10 @@
 <template>
 	<div class="searchwork">
 		<div class="box">
-			<form action="#" method="post">
-				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}"/>
+			<div class="form">
+				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}" />
 				<button class="search-btn">搜索</button>
-			</form>
+			</div>
 			<div class="list">
 				<span>热门搜索：</span>
 				<a href="#">有赞</a>
@@ -18,21 +18,20 @@
 		</div>
 	</div>
 </template>
-
 <script>
-export default {
-	data(){
-		return{
-			isshow:false
-		}
-	},
-}
+	export default {
+		data() {
+			return {
+				isshow: false
+			}
+		},
+	}
 </script>
 
 <style lang="less" scoped>
-.foc{
-	border: 1px solid #00b38a!important;
-}
+	.foc {
+		border: 1px solid #00b38a!important;
+	}
 	.searchwork {
 		width: 100%;
 		height: 132px;
@@ -41,7 +40,7 @@ export default {
 		.box {
 			width: 80%;
 			margin: 0 auto;
-			form {
+			.form {
 				width: 938px;
 				height: 46px;
 				margin: 0 auto;
@@ -78,7 +77,7 @@ export default {
 					color: #00b38a;
 					padding: 0 8px;
 					text-decoration: none;
-					&:hover{
+					&:hover {
 						text-decoration: underline;
 					}
 				}

@@ -7,24 +7,18 @@ import HelloWorld from '@/components/HelloWorld'
 import company_home from '../pages/tang/company_home'
 import jobHome from '@/pages/chu/jobHome'
 import xiangqing from '@/pages/chu/xiangqing'
+import company from '@/pages/LH/company'
 Vue.use(Router)
 
 export default new Router({
 	routes: [
 	{
-      path: '/Login',
-      name: 'Login',
-      component: Login
-    },
-	{
-		path: '/Index',
-		path: '/',
+		path: '/index',
 		name: 'Index',
 		component: Index
 	},
 	{
       path: '/HelloWorld',
-      path: '/',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -54,5 +48,10 @@ export default new Router({
       name: 'xiangqing',
       component: xiangqing
     },
+    {
+      path: '/company',
+      name: 'company',
+      component: company
+    }
 	]
 })

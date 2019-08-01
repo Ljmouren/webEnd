@@ -1,7 +1,7 @@
 <template>
   <div class="top">
      <!--底部-->
-			<footer class="public-footer">
+			<footer class="public-footer modify">
 				<div class="inner_wrapper">
 					      <div class="footer_module_column">
 		                <a class="footer_app bjgreen" href="#" > <i class="el-icon-mobile-phone"></i>下载拉勾APP </a>
@@ -86,6 +86,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.modify{
+	margin-left: -94px;
+}
 a{
  text-decoration: none;		
 }
@@ -179,10 +182,6 @@ a{
 .public-footer .copyright {
   clear: both;
   margin: 60px auto;
-<<<<<<< HEAD
-=======
-  margin-bottom:0px;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
   color: #999;
   font-size: 14px;
   line-height: 12px;

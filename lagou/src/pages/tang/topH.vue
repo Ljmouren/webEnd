@@ -102,6 +102,10 @@
 		background: #f2f5f4;
 		color: #555;
 		padding-top: 30px;
+<<<<<<< HEAD
+=======
+		
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	}
 	
 	.top_info .company_info {
@@ -286,6 +290,10 @@
 		width: 1200px;
 		max-width: 1200px;
 		margin: 0 auto;
+<<<<<<< HEAD
+=======
+		overflow: hidden;
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	}
 	.top_info{
 		position: relative;

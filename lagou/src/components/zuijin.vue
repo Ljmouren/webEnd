@@ -12,9 +12,16 @@
 				<p>6k-12k</p>
 				<p>旅拍云约</p>
 			</div>
+<<<<<<< HEAD
 			<img src="img/v3.JPG">
 			<img src="img/v2.JPG">
 			<img src="img/v1.JPG">
+=======
+			<img src="https://www.lgstatic.com/i/image2/M01/6B/6B/CgoB5l0-lnKAE814AAAg4aUrjLk355.PNG">
+			<img src="https://www.lgstatic.com/i/image2/M01/62/3C/CgotOV0tROeANdp4AACKU68GAEc723.JPG">
+			<img src="https://www.lgstatic.com/i/image2/M01/5F/E5/CgoB5l0ojBmAULrpAAA2Rjm2nqc492.JPG">
+			
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		</div>
   </div>
 </template>
@@ -35,7 +42,11 @@ export default {
 .middle-right{
 	padding: 5px;
 	position: absolute;
+<<<<<<< HEAD
 	top: 200px;
+=======
+	top: 160px;
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	right:200px ;
 	background:#fafafa ;
 	width: 14%;

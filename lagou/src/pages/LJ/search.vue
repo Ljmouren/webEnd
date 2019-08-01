@@ -1,10 +1,17 @@
 <template>
 	<div class="searchwork">
 		<div class="box">
+<<<<<<< HEAD
 			<form action="#" method="post">
 				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}"/>
 				<button class="search-btn">搜索</button>
 			</form>
+=======
+			<div class="form">
+				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}" />
+				<button class="search-btn">搜索</button>
+			</div>
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<div class="list">
 				<span>热门搜索：</span>
 				<a href="#">有赞</a>
@@ -18,6 +25,7 @@
 		</div>
 	</div>
 </template>
+<<<<<<< HEAD
 
 <script>
 export default {
@@ -33,6 +41,22 @@ export default {
 .foc{
 	border: 1px solid #00b38a!important;
 }
+=======
+<script>
+	export default {
+		data() {
+			return {
+				isshow: false
+			}
+		},
+	}
+</script>
+
+<style lang="less" scoped>
+	.foc {
+		border: 1px solid #00b38a!important;
+	}
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	.searchwork {
 		width: 100%;
 		height: 132px;
@@ -41,7 +65,11 @@ export default {
 		.box {
 			width: 80%;
 			margin: 0 auto;
+<<<<<<< HEAD
 			form {
+=======
+			.form {
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 				width: 938px;
 				height: 46px;
 				margin: 0 auto;
@@ -78,7 +106,11 @@ export default {
 					color: #00b38a;
 					padding: 0 8px;
 					text-decoration: none;
+<<<<<<< HEAD
 					&:hover{
+=======
+					&:hover {
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 						text-decoration: underline;
 					}
 				}

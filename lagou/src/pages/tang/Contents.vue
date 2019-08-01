@@ -1,7 +1,14 @@
 <template>
+<<<<<<< HEAD
 	<div>
 		<!--公司产品-->
 		<item item_title='公司产品'>
+=======
+	<div class="main">
+	<div class="main_left">
+		<!--公司产品-->
+		<item item_title='公司产品' id='product'>
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<div class="product_content" slot='product_content'>
 				<img class="product_picture" src="../../assets/img/company/Cgp3O1bPulmAMI98AACem7xeTSM951.jpg" />
 				<div class="product_details">
@@ -31,6 +38,7 @@
 				</div>
 			</div>
 		</item>
+<<<<<<< HEAD
 
 		<div class="main_left">
 			<!--公司产品-->
@@ -77,6 +85,21 @@
 						</div>
 						<div class="longTxt" v-show="!isShow">
 							<span class="company_content"><p>&nbsp; &nbsp; 微盟，香港主板上市企业（股票代码：2013.HK），成立于2013年4月，现有员工超2000人，渠道代理商超1500家，注册商户超270万。<br>&nbsp;&nbsp;&nbsp;&nbsp;微盟是中国领军的中小企业云端商业及营销解决方案提供商，同时也是中国领军的腾讯社交网络服务平台中小企业精准营销服务提供商。微盟围绕商业云、营销云、销售云打造智慧云端生态体系，通过去中心化的智慧商业解決方案赋能中小企业实现数字化转型。目前旗下拥有:微商城、智慧零售、智慧餐厅、客来店、智慧酒店、智慧休娱、智慧美业、销售推、微站、广告助手等解决方案，帮助客户在新零售时代提高运营效率和盈利能力。微盟精准营销业务以大数据、智能算法、营销自动化等技术及优质媒体源，为广告主提供一站式精准营销投放服务。同时微盟旗下微盟云平台通过开放微盟核心产品技术能力，吸引第三方开发者，打造云端生态体系，为商户提供更多应用选择和更好服务。<br>&nbsp;&nbsp;&nbsp;&nbsp;微盟致力于通过产品和服务，助力中小企业向数字化转型，通过科技驱动商业革新，让商业变得更智慧！</p>
+=======
+		<!--公司介绍-->
+		<item item_title='公司介绍' id='company_intro'>
+			<div class="product_content company_intro" slot='product_content'>
+				<video width="480" height="270" controls="controls">
+					<source src="http://xiaoyuanstatic.lagou.com/activity/shengzhiji/video/14229-1.mp4" type="video/mp4"></source>
+				</video>
+				<div class="company_intro_text">
+					<div class="shortTxt" v-show="isShow">
+						<p>&nbsp; &nbsp; 微盟，香港主板上市企业（股票代码：2013.HK），成立于2013年4月，现有员工超2000人，渠道代理商超1500家，注册商户超270万。<br>&nbsp;&nbsp;&nbsp;&nbsp;微盟是中国领军的中小企业云端商业及营销解决方案提供商，同时也是中国领军的腾讯社交网络服务平台中小企业精准营销服务提供商。微盟围绕商业云、营销云、销售云打造智慧云端生态体系，通过去中心化的智慧商业解決方案赋能中小企业实现数字化转型。目前旗下拥有:微商城、智慧零售、智慧餐厅、客来店、智慧<br></p>
+						<p><strong>...</strong></p>
+					</div>
+					<div class="longTxt" v-show="!isShow">
+						<span class="company_content"><p>&nbsp; &nbsp; 微盟，香港主板上市企业（股票代码：2013.HK），成立于2013年4月，现有员工超2000人，渠道代理商超1500家，注册商户超270万。<br>&nbsp;&nbsp;&nbsp;&nbsp;微盟是中国领军的中小企业云端商业及营销解决方案提供商，同时也是中国领军的腾讯社交网络服务平台中小企业精准营销服务提供商。微盟围绕商业云、营销云、销售云打造智慧云端生态体系，通过去中心化的智慧商业解決方案赋能中小企业实现数字化转型。目前旗下拥有:微商城、智慧零售、智慧餐厅、客来店、智慧酒店、智慧休娱、智慧美业、销售推、微站、广告助手等解决方案，帮助客户在新零售时代提高运营效率和盈利能力。微盟精准营销业务以大数据、智能算法、营销自动化等技术及优质媒体源，为广告主提供一站式精准营销投放服务。同时微盟旗下微盟云平台通过开放微盟核心产品技术能力，吸引第三方开发者，打造云端生态体系，为商户提供更多应用选择和更好服务。<br>&nbsp;&nbsp;&nbsp;&nbsp;微盟致力于通过产品和服务，助力中小企业向数字化转型，通过科技驱动商业革新，让商业变得更智慧！</p>
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 							<p>&nbsp;</p>
 							<p><strong>【</strong><strong>牛哄哄的福利</strong><strong>】</strong><strong></strong></p>
 							<p>l&nbsp;<strong>办公环境：</strong>宽敞舒适的办公环境，单纯的人际关系，自由平等，无障碍的沟通方式</p>
@@ -95,6 +118,7 @@
 							<p>l&nbsp;<strong>奖励机制：</strong>优秀员工，super&nbsp;star，季度明星.&nbsp;说不定下一个就是你哦</p>
 							<p>l&nbsp;<strong>年底双薪：</strong>世界上最快乐的事，莫过于数钱数到手软吧</p>
 						</span>
+<<<<<<< HEAD
 						</div>
 						<a class="showTxt" v-show="isShow" @click="change">展开<i class="el-icon-arrow-down"></i></a>
 						<a class="showTxt" v-show="!isShow" @click="change">收起<i class="el-icon-arrow-up"></i></a>
@@ -139,6 +163,58 @@
 		methods: {
 			change() {
 				this.isShow = !this.isShow;
+=======
+					</div>
+					<a class="showTxt" v-show="isShow" @click="change">展开<i class="el-icon-arrow-down"></i></a>
+					<a class="showTxt" v-show="!isShow" @click="change">收起<i class="el-icon-arrow-up"></i></a>
+				</div>
+			</div>
+		</item>
+		<!--轮播图-->
+		<lunbo></lunbo>
+		<!--发展历程-->
+		<item item_title='发展历程' id='history'>
+			<div class="product_content" slot='product_content'>
+			<history></history>
+			</div>			
+		</item>
+		<!--面试评价-->
+		<item item_title='面试评价' id='comments'>
+			<div class="product_content" slot='product_content'>
+			<comments></comments>
+			</div>			
+		</item>
+		<item item_title='公司位置' id='location'>
+			<div class="product_content" slot='product_content'>
+			<location></location>
+			</div>			
+		</item>
+	</div>
+	<c_right></c_right>
+	</div>
+</template>
+
+<script>
+	import item from './item'
+	import lunbo from './lunbo'
+	import history from './history'
+	import comments from './comments'
+	import location from './location'
+	import c_right from './c_right'
+	export default {
+		components: {
+			item,lunbo,history,comments,location,c_right
+		},
+		data(){
+			return{
+				isShow:true,
+				showTxt:'展开'
+			}
+		},
+		methods:{
+			change(){
+				this.isShow=!this.isShow;
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			}
 		}
 	}
@@ -146,8 +222,43 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+<<<<<<< HEAD
 
 </style>
 .main_left { box-shadow: 8px 0 4px -4px #f5f5f5; margin-top: 50px; width: 64%; padding-right: 20px; } .company_intro { text-align: center; width: 100%; } .company_intro .company_intro_text { margin: 20px 0; text-align: left; color: #555555; font-size: 14px; } .showTxt { color: #00b38a; cursor: pointer; }
+=======
+.main{
+	display: flex;
+	margin-top: 50px;
+		width: 1200px;
+		max-width: 1200px;
+		/*margin: 0 auto;*/
+	}
+
+	.main_left {
+		box-shadow: 8px 0 4px -4px #f5f5f5;		
+		width: 64%;
+		padding-right: 20px;
+	}	
+	.company_intro {
+		text-align: center;
+		width: 100%;
+	}
+	
+	.company_intro .company_intro_text {
+		margin: 20px 0;
+		text-align: left;
+		color: #555555;
+		font-size: 14px;
+	}
+	
+	.showTxt {
+		color: #00b38a;
+		cursor: pointer;
+	}
+	
+</style>
+<style>
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 
 </style>

@@ -5,6 +5,10 @@ import Register from '@/pages/yu/Register'
 import Index from '@/pages/LJ/index'
 import HelloWorld from '@/components/HelloWorld'
 import company_home from '../pages/tang/company_home'
+<<<<<<< HEAD
+=======
+import company from '../pages/LH/company'
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 import jobHome from '@/pages/chu/jobHome'
 import xiangqing from '@/pages/chu/xiangqing'
 Vue.use(Router)
@@ -12,11 +16,14 @@ Vue.use(Router)
 export default new Router({
 	routes: [
 	{
+<<<<<<< HEAD
       path: '/Login',
       name: 'Login',
       component: Login
     },
 	{
+=======
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		path: '/Index',
 		name: 'Index',
 		component: Index
@@ -32,10 +39,27 @@ export default new Router({
       component: company_home
     },
     {
+<<<<<<< HEAD
     path: '/Register',
     name: 'Register',
     component: Register
    },   
+=======
+      path: '/company',
+      name: 'company',
+      component: company
+    },
+    {
+    path: '/Register',
+    name: 'Register',
+    component: Register
+   }, 
+   {
+      path: '/Login',
+      name: 'Login',
+      component: HelloWorld
+    },
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
    {
       path: '/jobHome',
       name: 'jobHome',
@@ -45,6 +69,10 @@ export default new Router({
       path: '/xiangqing',
       name: 'xiangqing',
       component: xiangqing
+<<<<<<< HEAD
     },
+=======
+    }
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	]
 })

@@ -1,5 +1,6 @@
 <template>
   <div class="jobList">
+<<<<<<< HEAD
   	   
 	          <div class="middle-3-1">
 								<div class="left">
@@ -16,12 +17,30 @@
 								
 			      </div>
 		        <div class="middle-3-2"><img src="img/2345_image_file_copy_1.jpg"></div>
+=======
+  	   <ul>
+  	   	<li>
+  	   		<div class="middle-3-1">
+								
+								<slot name="left"></slot>
+								<slot name="right"></slot>
+								
+			      </div>
+		        <div class="middle-3-2"><img :src="imgSrc"></div>
+  	   	</li>
+  	   </ul>
+	          
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
+<<<<<<< HEAD
+=======
+  props:["imgSrc"],
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -42,6 +61,10 @@ export default {
 
 .middle-3 li{
 	display: flex;
+<<<<<<< HEAD
+=======
+	width: 900px;
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	background: #fafafa;
 	border: 1px solid #ededed;
 	padding: 10px;

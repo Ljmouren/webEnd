@@ -14,6 +14,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "animate.css": "^3.7.2",
+>>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
     "axios": "^0.19.0",
     "element-ui": "^2.11.1",
     "font-awesome": "^4.7.0",

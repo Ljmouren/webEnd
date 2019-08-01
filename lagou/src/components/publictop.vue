@@ -5,17 +5,17 @@
 				<a href="#" class="company"><span class="company-logo"></span></a>
 				<span class="address">全国站</span><a href="#" class="city login">[切换城市]</a>
 				<ul>
-					<li  v-for="(item,index) in arr"  @click='flag=index,fn(index)' :class="{hs:flag==index}"><a href="#"  class="login">{{item.name}}</a></li>
+					<li  v-for="(item,index) in arr"  @click='flag=index,fn(index)' :class="{hs:flag==index}"><a class="login">{{item.name}}</a></li>
 					<!--<li :index="1"><a href="#" @click="flag=1" :class="{hs:flag==1}">首页</a></li>
 					<li :index="2"><a href="#" @click="flag=2" :class="{hs:flag==2}">首页</a></li>
 					<li :index="3"><a href="#" @click="flag=3" :class="{hs:flag==3}">首页</a></li>
 					<li :index="4"><a href="#" @click="flag=4" :class="{hs:flag==4}">首页</a></li>-->
 				</ul>
-				<div href="#" class="register">
+				<div class="register">
 					<span class="register-log"></span>
-					<router-link to='./Login' class="login">登录</router-link>
+					<a class="login" @click="log">登录</a>
 					<a href="#">|</a>
-					<router-link to='./Register' class="login">注册</router-link>
+					<a class="login" @click="res">注册</a>
 				</div>
 				<a href="#" class="app green"><span class="app-log"><i class="el-icon-mobile-phone"></i></span>拉勾APP</a>
 				<a href="#" class="version login">进入企业版</a>
@@ -42,6 +42,12 @@ export default {
 			}else if(index=='1'){
 				this.$router.push('/jobHome')
 			}
+		},
+		log(){
+			this.$router.push('/Login')
+		},
+		res(){
+			this.$router.push('/Register')
 		}
 	},
 	computed:{

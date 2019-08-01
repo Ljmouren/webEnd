@@ -34,8 +34,7 @@
 				</li>
 			</ul>
 			<div class="a">
-
-				<button class="list-more" @click="fn()" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
+				<div class="list-more" @click="fn()" :class="{showgreen:isS}" @mouseenter="yiru" @mouseleave="yichu">查看更多</div>
 			</div>
 		</div>
 	</div>
@@ -48,7 +47,6 @@
 				isshow: true,
 				arr: [],
 				isS: false
-
 			}
 		},
 		mounted() {
@@ -84,6 +82,7 @@
 	.a {
 		margin-top: 10px;
 		width: 100%;
+		height: 80px;
 		text-align: center;
 		transform: translateX(-1.5%);
 		.list-more {
@@ -128,6 +127,7 @@
 		width: 97%;
 		font-size: 0;
 		border-bottom: 1px solid #E8E8E8;
+		overflow: hidden;
 		li {
 			border-bottom: 2px solid #333;
 			background: #fff;
@@ -141,7 +141,8 @@
 	
 	.companybox {
 		width: 90%;
-		margin: 0 auto;
+		margin: 0px auto 0;
+		overflow: hidden;
 		.company {
 			.company-list {
 				margin-top: 10px;

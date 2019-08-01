@@ -3,7 +3,7 @@
 		<img class="logoimg" src="https://www.lgstatic.com/i/image2/M01/22/3C/CgoB5ly_5LeABgLIAADWGM9TJQU214.PNG" />
 		<div class="login-from">
 			<div class="from-tel">
-				<input type="text" placeholder="输入手机号" v-model="tel" />
+				<input type="text" placeholder="输入手机号" v-model="tel" @blur="pan()"/>
 				<p v-if="show1"><img src="../../assets/icon_85a17fe.png" />请输入手机号</p>
 				<p v-if="show2"><img src="../../assets/icon_85a17fe.png" />请输入正确手机号</p>
 				<p v-if="show3"><img src="../../assets/icon_85a17fe.png" />请输入手机号&nbsp;|&nbsp;请输入验证码</p>
@@ -54,6 +54,15 @@
 					}
 				}
 			},
+			pan(){
+				if(this.tel.length == 0){
+					this.show2=false;
+					this.show1=false;
+					this.show3=false;	
+				}else if(this.tel.length<11){
+					this.show2 = true;
+				}
+			},
 			login(){
 				if(this.send){
 					this.$router.push('/Login')
@@ -63,12 +72,6 @@
 					this.show3=true;
 				}
 			}
-//			login(){
-//				if(){
-//					
-//				}
-//				this.$router.push('/Login')
-//			}
 		}
 	}
 </script>

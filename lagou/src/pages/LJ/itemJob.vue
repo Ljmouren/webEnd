@@ -3,16 +3,21 @@
 		<div class="itemBig">
 			<ul class="jobTab">
 				<li @click="layout='hot'" :class="{active:layout=='hot'}">24Hour热门</li>
-				<li  @click="layout='now'" :class="{active:layout=='now'}">最新职位</li>
+				<li @click="layout='now'" :class="{active:layout=='now'}">最新职位</li>
 			</ul>
-			<div class="hot_tips" :class="{show:isshow}">
+			<div class="hot_tips" :class="{show:isshow}" v-show="layout=='hot'">
 				<span class="icon"><i>?</i></span>
 				<div>过去24小时，最多人看过的岗位在这里</div>
 				<span class="know" @click="change()">我知道了</span>
 			</div>
+			<div class="hot_tips" :class="{show:isshow1}" v-show="layout=='now'">
+				<span class="icon"><i>?</i></span>
+				<div>刚刚发布的职位！</div>
+				<span class="know" @click="change1()">我知道了</span>
+			</div>
 			<div class="itembox">
-				<ul class="items" v-for="item in arr" v-show="layout=='hot'">
-					<li class="itemsli">
+				<ul class="items" v-for="(item,index) in arr" v-show="layout=='hot'" :key="index">
+					<li :class="current==index?'itemsli shadow':'itemsli'" @mouseenter="over(index)" @mouseleave="out()">
 						<div class="itemt">
 							<p>
 								<span>{{item.title}}</span>
@@ -53,11 +58,11 @@
 						</div>
 					</li>
 				</ul>
-				<div class="a">
-					<button class="list-more" @click="fn()" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
-				</div>
 			</div>
-		</div></div>
+			<div class="a">
+				<div class="list-more" @click="fn()" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -67,9 +72,11 @@
 			return {
 				arr: [],
 				isshow: false,
+				isshow1: false,
 				isS: false,
-				layout:'hot',
-				isS: false
+				layout: 'hot',
+				isS: false,
+				current: ''
 			}
 		},
 		mounted() {
@@ -84,25 +91,40 @@
 			change() {
 				this.isshow = !this.isshow;
 			},
+			change1() {
+				this.isshow1 = !this.isshow1;
+			},
 			yiru() {
 				this.isS = true;
 			},
 			yichu() {
 				this.isS = false;
 			},
-			fn(){
+			fn() {
 				this.$router.push('/jobHome');
+			},
+			over(index) {
+				console.log(index)
+				this.current = index;
+			},
+			out() {
+				this.current = '';
 			}
 		}
 	}
 </script>
 
 <style lang="less" scoped>
+	.shadow {
+		box-shadow: 0px 0px 2px red;
+	}
+	
 	.a {
 		margin-top: 10px;
 		width: 100%;
+		height: 80px;
 		text-align: center;
-		transform: translateX(-1.5%);
+		transform: translateX(-1%);
 		.list-more {
 			width: 31%;
 			height: 42px;
@@ -120,10 +142,14 @@
 			color: white;
 		}
 	}
+	
 	.hot_tips {
 		font-size: 14px;
 		display: flex;
 		margin-top: 30px;
+		div {
+			color: #888;
+		}
 		.icon {
 			width: 18px;
 			height: 18px;
@@ -139,46 +165,49 @@
 			cursor: pointer;
 		}
 	}
+	
 	.show {
 		display: none;
 	}
+	
 	.itemjob {
 		width: 90%;
 		margin: 0 auto;
-		.itemBig{
+		.itemBig {
 			width: 100%;
-		}
-		.jobTab {
-			width: 97%;
-			box-sizing: border-box;
-			margin-top: 30px;
-			border-bottom: 1px solid #ccc;
 			overflow: hidden;
-			li {
-				float: left;
-				line-height: 60px;
-				margin-right: 45px;
-				color: #999999;
-				&.active {
-					border-bottom: 2px solid #333333;
-					color: black;
+			.jobTab {
+				width: 97%;
+				box-sizing: border-box;
+				margin-top: 30px;
+				border-bottom: 1px solid #ccc;
+				overflow: hidden;
+				li {
+					float: left;
+					line-height: 60px;
+					margin-right: 45px;
+					color: #999999;
+					&.active {
+						border-bottom: 2px solid #333333;
+						color: black;
+					}
 				}
 			}
 		}
 		.itembox {
+				overflow: hidden;
 			.items {
 				width: 100%;
 				font-size: 15px;
 				.itemsli {
+					float: left;
 					width: 31%;
 					height: 200px;
 					padding: 15px;
 					border: 1px solid #EAEEED;
 					background-color: #fff;
 					box-sizing: border-box;
-					float: left;
-					margin: 20px 24px 0 0;
-					overflow: hidden;
+					margin: 20px 20px 5px 5px;
 					.itemt {
 						position: relative;
 						line-height: 30px;

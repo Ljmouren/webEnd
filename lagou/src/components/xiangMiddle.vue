@@ -26,7 +26,7 @@
 						   		<li> <h3>职位发布者:</h3></li>
 						   		<li class="fabu">
 						   			
-						   			<img src="img/aa.jpeg"/> 
+						   			<img class="touxiang" src="//www.lgstatic.com/thumbnail_120x120/i/image2/M00/4A/3D/CgotOVrrEmOAQOM3AAAVDoHzUvE735.jpg"/> 
 						   				
 						   			<div>
 						   		    	<p>活跃时段  <i class="fa fa-question-circle-o"></i></p>
@@ -58,36 +58,13 @@
 						    </div>
 						    
 						    <div class="zhong-3">
-						    <div class="haikan">
-						    	<img src="img/B1.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>交控科技</P>
+						    <div class="haikan" v-for="item in jobArr3">
+						    	<img :src="item.cover_url" />
+						    	<p>{{item.type}}</p>
+						    	<p>{{item.wage}}</p>
+						    	<P>{{item.jobName}}</P>
 						    </div>
-						    <div class="haikan">
-						    	<img src="img/B2.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>雪球科技</P>
-						    </div>
-						    <div class="haikan">
-						    	<img src="img/B3.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>灵喵机器人</P>
-						    </div>
-						    <div class="haikan">
-						    	<img src="img/B4.jpg" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>普创天信</P>
-						    </div>
-						    <div class="haikan">
-						    	<img src="img/B5.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>大普微</P>
-						    </div>
+						    
 						  
 						    </div>
 						    
@@ -109,7 +86,10 @@
 					<div class="zhong-right">
 						<div class="zhong-2">
 							<div class="zhong-2-1">
-								<p class="p1"><img class="tu-1" src="img/ss.png"/><a class="kai">开易科技</a><img class="tu-2" src="img/gou.png"/></p>
+								<p class="p1"><img class="tu-1" src="//www.lgstatic.com/thumbnail_160x160/i/image/M00/9A/8F/CgqKkVihZ_OARyluAAASog9Z9z8701.png"/><a class="kai">开易科技</a>
+									<span class="tu-2">	<i class="fa fa-get-pocket fa-lg"></i></span>
+								
+							</p>
 							    <p><i class="fa fa-qrcode fa-lg"></i> 数据服务,其他</p>
 							    <p><i class="fa fa-line-chart fa-lg"></i> A轮</p>
 							    <p><i class="fa fa-user-o fa-lg"></i>  50-150人</p>
@@ -117,46 +97,20 @@
 							</div>
 							<div class="zhong-2-2">
 								<h1>相似职位</h1>
-								<div class="xiaokuang">
-									<img src="img/22.jpg"  />
+								
+								
+								<div class="xiaokuang" v-for="item in jobArr2">
+									<img :src="item.cover_url"  />
 									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
+										<p>{{item.title}}</p>
+										<p>{{item.wage}}</p>
+										<p>[{{item.address}}]</p>
 									</div>
 								</div>
-								<div class="xiaokuang">
-									<img src="img/33.png" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-								<div class="xiaokuang">
-									<img src="img/feng.jpg" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-								<div class="xiaokuang">
-									<img src="img/44.jpg" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-								<div class="xiaokuang">
-									<img src="img/22.jpg" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
+								
+								
+								
+						
 							    <p class="more"><a href="#">查看更多相似职位</a><i class="fa fa-angle-right fa-lg"></i></p>
 							</div>
 							
@@ -172,8 +126,27 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+     jobArr1:[],
     }
+  },
+  mounted(){
+  	this.getJobDate();
+  },
+  computed:{
+  	jobArr2(){
+  		return this.jobArr1.slice(0,7);
+  	},
+  	jobArr3(){
+  		return this.jobArr1.slice(8,12);
+  	},
+  },
+  methods:{
+  	getJobDate(){
+  		this.$axios.get("../../../static/data/chuJob.json").then(res=>{
+  			console.log(res.data.recommend_one);
+  			this.jobArr1=res.data.recommend_one
+  		})
+  	},
   }
 }
 </script>
@@ -182,6 +155,10 @@ export default {
 <style scoped lang="less">
 h3{
 	font-weight: bold;
+	
+}
+.touxiang{
+	border-radius: 50%;
 }
 .zhong{
 	background: #f2f5f4;
@@ -483,5 +460,8 @@ h3{
 .fa-qrcode,.fa-line-chart,.fa-user-o,.fa-home{
 	color: #737373;
 	margin-right: 10px;
+}
+.fa-get-pocket{
+	color: #00b38a;
 }
 </style>

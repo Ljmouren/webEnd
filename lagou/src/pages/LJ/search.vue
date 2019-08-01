@@ -2,7 +2,11 @@
 	<div class="searchwork">
 		<div class="box">
 			<div class="form">
+<<<<<<< HEAD
 				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}" />
+=======
+				<input type="text" placeholder="搜索职位、公司或地点" @blur="isshow=false" @focus="isshow=true" :class="{foc:isshow}"/>
+>>>>>>> 83aca572d5e0dfe76b3a14b321aa3bf870cc31af
 				<button class="search-btn">搜索</button>
 			</div>
 			<div class="list">

@@ -34,7 +34,11 @@
 				</li>
 			</ul>
 			<div class="a">
+
 				<button class="list-more" @click="fn()" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
+
+				<button class="list-more" :class="{showgreen:isS}" @mousemove="yiru" @mouseout="yichu">查看更多</button>
+
 			</div>
 		</div>
 	</div>
@@ -68,9 +72,12 @@
 			},
 			yichu() {
 				this.isS = false;
+
 			},
 			fn(){
 				this.$router.push('/company')
+
+
 			}
 		}
 	}
@@ -174,7 +181,9 @@
 						}
 					}
 					.companyb {
+
 						width: 100%;
+
 						overflow: hidden;
 						a {
 							float: left;
@@ -182,7 +191,11 @@
 							display: block;
 							margin-top: 17px;
 							text-align: center;
+
 							width: 32%;
+
+							width: 90px;
+
 							.green {
 								color: #00b38a;
 							}

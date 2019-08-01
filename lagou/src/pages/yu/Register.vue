@@ -1,12 +1,11 @@
 <template>
-
 	<div class="registerwrap">
 		<div class="header">
 			<div class="lefthead">
 				<img src="../../assets/logo-slogan_443548c6.png" class="headerlogo" @click="goshouye">
 			</div>
 			<div class="righthead">
-				<a href="#" class="show" @mouseover="showw">
+				<a href="#" class="show" @mouseover='showw'>
 					<i class="fa fa-mobile fa-lg"></i> 拉勾APP
 					<span class="shuxian">|</span>
 					<img class="qrcode_app" src="//www.lgstatic.com/lg-landingpage-fed/pc/images/qrcode-new_69efb8b8.png" v-show="isShow" >
@@ -59,10 +58,10 @@
 					<form class="form-right">
 						<p>
 							<Form>
-								<span class="updowm" slot="phonenum">0086</span>
-								<input type="text" placeholder="请输入常用手机号" slot="ainput" class="diyige">
-								<input type="text" placeholder="请输入手机验证码" slot="binput" class="dierge">
-								<span class="getcode" slot="wangjimima">获取验证码</span>
+								<span slot="phonenum" class="updowm">0086</span>
+						        <input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone">
+								<input type="text" placeholder="请输入手机验证码" slot="binput" class="dierge" >
+								<span class="getcode" slot="wangjimima" @click="sendcode" :disabled="disabled">{{btntxt}}</span>
 							</Form>
 						</p>
 
@@ -126,47 +125,94 @@
 	</div>
 </template>
 
-
-
 <script>
 	import Form from '../../components/Form'
 	export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-    	arr:[ {"name":"android"},
-      {"name":"app设计师"}, 
-      {"name":"angular"},
-      {"name":"app推广"},
-      {"name":"android开发工程师"},
-      {"name":"android"}],
-        content:''
-    }
-  },
- components: {
+		name: 'HelloWorld',
+		data() {
+			return {
+//				arr: [
+//				    {name: 'rick'},
+//					{name: 'demen'},
+//					{name: 'jack'},
+//					{name: 'john'},
+//					{name: 'Lucy'},
+//				],
+				stylelist:[
+				{title:'技术'},
+				{title:'产品'},
+				{title:'设计'},
+				{title:'市场'},
+				{title:'运营'},
+				{title:'销售'},
+				],
+				content: '',
+                active:'',
+                isShow:false,
+                disabled:false,  // 获取验证码部分
+                time:0,            // 获取验证码部分
+                btntxt:"获取验证码",   // 获取验证码部分
+                phone:this.phone    // 获取验证码部分
+			}
+		},
+		components: {
 			Form
 		},
-	methods:{
-	   goreg(){
-  		 this.$router.push('/Register')
-        }
-	},
-	computed:{
-		searchVal(){
-			var that=this;
-				return this.arr.filter(function(item) {
-							var arrs=item.name.toLowerCase().indexOf(that.content)>-1
-							|| item.gender.indexOf(that.content)>-1
-							;
-							return arrs;
-						})
-		}
-	},
-	filters: {
-					low: function(val) {
-						return val.charAt(0).toUpperCase() + val.slice(1);
-					},
+		methods: {
+			// 验证手机号码部分
+			//..........
+			sendcode(){
+				var reg=11&& /^[1][3,4,5,6,7,8][0-9]{9}$/;
+				if(this.phone==''){
+					alert("请输入手机号码")
+				}else if(!reg.test(this.phone)){
+					alert("手机格式不正确")
+				}
+				else{
+					this.time=60;
+					this.disabled=true;
+					this.timer();
+				}
 			},
+			timer(){
+				if(this.time>0){
+					this.time--;
+					this.btntxt=this.time+"s后重新获取";
+					setTimeout(this.timer,1000);
+				}else{
+					this.time=0;
+					this.btntxt="获取验证码";
+					this.disabled=false;
+				}
+			},
+			goto() {
+				this.$router.push('/Login')
+			},
+			showw(){
+						this.isShow = !this.isShow;
+					},
+			selected(title){
+                      this.active = title;
+                     },
+          goshouye(){ 
+          	  this.$router.push('/index')
+          },
+          
+		},
+//		computed: {
+//			items: function() {
+//				var that = this;
+//				return this.arr.filter(function(item) {
+//					var arrs = item.name.toLowerCase().indexOf(that.content) > -1;
+//					return arrs;
+//				})
+//			}
+//		},
+//		filters: {
+//			low: function(val) {
+//				return val.charAt(0).toUpperCase() + val.slice(1);
+//			},
+//		}
 	}
 </script>
 
@@ -421,11 +467,11 @@
 		border-radius: 3px;
 	}
 	
-	.rightmiddle .diyige {
+	.rightmiddle .input1-1 {
+		text-indent:4.5rem;
 		font-weight: lighter;
 		width: 100%;
 		height: 38px;
-		text-align: center;
 		box-sizing: border-box;
 		font-size: 16px;
 		color: #333;

@@ -102,6 +102,7 @@
 		background: #f2f5f4;
 		color: #555;
 		padding-top: 30px;
+		
 	}
 	
 	.top_info .company_info {
@@ -286,6 +287,7 @@
 		width: 1200px;
 		max-width: 1200px;
 		margin: 0 auto;
+		overflow: hidden;
 	}
 	.top_info{
 		position: relative;

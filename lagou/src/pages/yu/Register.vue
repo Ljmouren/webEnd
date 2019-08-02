@@ -49,13 +49,13 @@
 						<p>
 							<Form>
 								<span slot="phonenum" class="updowm">0086</span>
-						         <input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone" @blur="sendcode">
+						         <input type="text" placeholder="请输入常用手机号" slot="ainput" class="input1-1" v-model="phone" @blur="sendcode" @focus="checkw">
 						          <p class="tishi" slot="tishik1" :class="{xian:tiShi!=''}">{{tiShi}}</p>
-								<input type="password" placeholder="请设置登录密码" slot="binput" class="dierge" v-model="pwd"  @blur="chpw">
+								<input type="password" placeholder="请设置登录密码" slot="binput" class="dierge" v-model="pwd"  @blur="chpw" @focus="checkp">
 								<p class="tishi" slot="tishik2" :class="{xian:tiShi2}">{{tiShi2}}</p>
 							</Form>
 						</p>
-						  <el-button type="text" @click="open" class="zhuce">立即注册</el-button>
+						  <el-button type="text" @click="isD" class="zhuce">立即注册</el-button>
 						<p class="xieyi">注册代表你已同意
 							<a href="#">「拉勾用户协议」</a>
 						</p>
@@ -143,12 +143,13 @@
                 time:0,           // 获取验证码部分
                 tiShi:'',         // 获取验证码部分
                 tiShi2:'',
-                phone:this.phone,       // 获取验证码部分
+                phone:'',       // 获取验证码部分
                 imgUrl:[],     //左侧图片渲染
                 indes:0,      //左侧图片渲染
-                pwd:this.pwd,     //验证密码部分
+                pwd:'',     //验证密码部分
                 isGo:false,   //点击注册按钮
-                
+                sendt:false,
+                sendm:false,
 			}
 		},
 		components: {
@@ -189,7 +190,16 @@
 				}
 				else{
 					this.tiShi='';
+					this.sendt=true;
 				}
+			},
+			checkp(){
+				  if(this.phone==''){
+				  	this.tiShi="请输入手机号码"
+				  }
+			},
+			checkw(){
+				this.tiShi2='';
 			},
 			// 验证密码部分
 			chpw(){
@@ -201,17 +211,25 @@
 						this.tiShi2="密码必须由6-16个英文字母和数字的字符串组成！"		
 			}else{
 				this.tiShi2='';
+				this.sendm=true;
 			}
+         },
+         isD(){
+         	if(this.sendt&&this.sendm){
+         		this.open();
+         	}
          },
          // 点击注册后弹出提示框
       open() {
+      	
         this.$confirm('您已成功注册拉勾网，点击确定跳转到登录页面', '确认信息', {
           distinguishCancelAndClose: true,
           confirmButtonText: '确定',
           cancelButtonText: '放弃'
         })
           .then(() => {
-          this.$router.push('/Login')
+          	this.$router.push('/Login')
+          
           })
           .catch(action => {
             this.$router.push('/Register')

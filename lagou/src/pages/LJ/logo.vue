@@ -3,26 +3,18 @@
 		<img class="logoimg" src="https://www.lgstatic.com/i/image2/M01/22/3C/CgoB5ly_5LeABgLIAADWGM9TJQU214.PNG" />
 		<div class="login-from">
 			<div class="from-tel">
-<<<<<<< HEAD
-				<input type="text" placeholder="输入手机号" v-model="tel" />
-				<p v-if="show1"><img src="../../assets/icon_85a17fe.png" />请输入手机号</p>
-				<p v-if="show2"><img src="../../assets/icon_85a17fe.png" />请输入正确手机号</p>
-=======
+
 				<input type="text" placeholder="输入手机号" v-model="tel" @blur="pan()"/>
 				<p v-if="show1"><img src="../../assets/icon_85a17fe.png" />请输入手机号</p>
 				<p v-if="show2"><img src="../../assets/icon_85a17fe.png" />请输入正确手机号</p>
 				<p v-if="show3"><img src="../../assets/icon_85a17fe.png" />请输入手机号&nbsp;|&nbsp;请输入验证码</p>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			</div>
 			<div class="from-yzm">
 				<input type="text" placeholder="验证码" v-model="num"/>
 				<div class="yz-btn" @click="obt">获取</div>
 			</div>
-<<<<<<< HEAD
-			<div class="login-btn">
-=======
+
 			<div class="login-btn" @click="login">
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 				登录/注册
 			</div>
 		</div>
@@ -34,15 +26,11 @@
 			return {
 				show1: false,
 				show2: false,
-<<<<<<< HEAD
-				tel: '',
-				num:''
-=======
+
 				show3:false,
 				tel: '',
 				num:'',
 				send:false
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			}
 		},
 		methods: {
@@ -50,38 +38,26 @@
 				if(this.tel.length == 0) {
 					this.show2 = false;
 					this.show1 = true;
-<<<<<<< HEAD
-				} else if(this.tel.length > 0 && this.tel.length < 11) {
-					this.show1=false;
-					this.show2 = true;
-=======
+
 					this.show3=false;
 				} else if(this.tel.length > 0 && this.tel.length < 11) {
 					this.show1=false;
 					this.show2 = true;
 					this.show3=false;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 				} else if(this.tel.length == 11){
 					var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
 					if(myreg.test(this.tel)){
 						this.show2=false;
 						this.show1=false;
-<<<<<<< HEAD
-						var num=parseInt((Math.random()*9+1)*100000);
-						this.num=num;
-=======
 						this.show3=false;
 						var num=parseInt((Math.random()*9+1)*100000);
 						this.num=num;
 						this.send=true;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 					}else{
 						this.show2=true;
 					}
 				}
 			},
-<<<<<<< HEAD
-=======
 			pan(){
 				if(this.tel.length == 0){
 					this.show2=false;
@@ -100,7 +76,6 @@
 					this.show3=true;
 				}
 			}
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 		}
 	}
 </script>
@@ -126,10 +101,8 @@
 				top: 50%;
 				transform: translateY(-50%);
 				p {
-<<<<<<< HEAD
-=======
+
 					width: 200px;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 					img {
 						width: 14px;
 						vertical-align: middle;

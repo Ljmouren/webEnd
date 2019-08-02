@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import animate from 'animate.css'
 	export default {
 		data() {
 			return {

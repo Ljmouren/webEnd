@@ -6,7 +6,6 @@ import Index from '@/pages/LJ/index'
 import HelloWorld from '@/components/HelloWorld'
 import company_home from '../pages/tang/company_home'
 import company from '../pages/LH/company'
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 import jobHome from '@/pages/chu/jobHome'
 import xiangqing from '@/pages/chu/xiangqing'
 Vue.use(Router)
@@ -38,7 +37,8 @@ export default new Router({
     path: '/Register',
     name: 'Register',
     component: Register
-   },   
+   },
+   {   
       path: '/company',
       name: 'company',
       component: company
@@ -63,8 +63,6 @@ export default new Router({
       path: '/xiangqing',
       name: 'xiangqing',
       component: xiangqing
-
-    },
 
     }
 

@@ -1,86 +1,16 @@
 <template>
   <div class="jobHome">
-      <div class="header1">
-			<div class="header1-1">
-				<p><span class="zhiwei">职位 (500+)</span><span class="gongsi">公司 (0)</span></p>
-				<input type="text" placeholder="搜索职位  公司或地点" /><button>搜索</button>
+  	
+  	<publictop></publictop>
+  	  
+    <div class="header1">
+					<div class="header1-1">
+						<p><span class="zhiwei">职位 (500+)</span><span class="gongsi">公司 (0)</span></p>
+						<input type="text" placeholder="搜索职位  公司或地点" /><button>搜索</button>
+					</div>
 			</div>
-		</div>
 		<!------------------------------------------->
 		<div class="middle">
-<<<<<<< HEAD
-			<div class="middle-1">
-				<ul>
-					<li>
-						<p>工作地点 :</p>
-						<a href="#">全国</a>
-						<a href="#">北京</a>
-						<a href="#">上海</a>
-						<a href="#">广州</a>
-						<a href="#">杭州</a>
-						<a href="#">成都</a>
-						<a href="#">南京</a>
-						<a href="#">武汉</a>
-						<a href="#">西安</a>
-						<a href="#">厦门</a>
-						<a href="#">长沙</a>
-						<a href="#">苏州</a>
-						<a href="#">天津</a>
-						<a href="#">长沙</a>
-						<a class="more" href="#">更多<i class="fa fa-sort-desc fa-lg"></i></a>
-						
-						
-					</li>
-					<li>
-						<p>工作经验 :</p>
-						<a href="#">不限</a>
-						<a href="#">应届毕业生</a>
-						<a href="#">3年及以下</a>
-						<a href="#">3-5年</a>
-						<a href="#">5-10年</a>
-						<a href="#">10年以上</a>
-						<a href="#">不要求</a>
-					</li>
-					<li>
-						<p>学历要求:</p>
-						<a href="#">不限</a>
-						<a href="#">大专</a>
-						<a href="#">本科</a>
-						<a href="#">硕士</a>
-						<a href="#">博士</a>
-						<a href="#">不要求</a>
-						
-					</li>
-					<li>
-						<p>公司规模 :</p>
-						<a href="#">不限</a>
-						<a href="#">不少于15人</a>
-						<a href="#">15-50人</a>
-						<a href="#">50-150人</a>
-						<a href="#">150-500人</a>
-						<a href="#">500-2000人</a>
-						<a href="#">2000人及以上</a>
-						
-					</li>
-					<li>
-						<p>行业领域 :</p>
-						<a href="#">不限</a>
-						<a href="#">移动互联网</a>
-						<a href="#">电商</a>
-						<a href="#">金融</a>
-						<a href="#">企业服务</a>
-						<a href="#">教育</a>
-						<a href="#">文娱|内容</a>
-						<a href="#">游戏</a>
-						<a href="#">消费生活</a>
-						<a href="#">硬件</a>
-						<a class="more" href="#">更多<i class="fa fa-sort-desc fa-lg"></i></a>
-					</li>
-					
-				</ul>
-				 <div class="shousuo"><i class="fa fa-angle-up fa-lg"></i></div>  
-			</div><!--middle-1-->
-=======
 			
 			<div class="kuang">
 					<div class="buxian" v-show="xian1">
@@ -95,136 +25,61 @@
 			
 					<div class="middle-1" v-show="yin1">
 							<ul>
-								<li :class="{write:isActive}">
-									<p>工作地点 :</p>
-									<a :class="{col:isActive1}" href="#">全国</a>
-									<a href="#">北京</a>
-									<a href="#">上海</a>
-									<a href="#">广州</a>
-									<a href="#">杭州</a>
-									<a href="#">成都</a>
-									<a href="#">南京</a>
-									<a href="#">武汉</a>
-									<a href="#">西安</a>
-									<a href="#">厦门</a>
-									<a href="#">长沙</a>
-									<a href="#">苏州</a>
-									<a href="#">天津</a>
-									<a href="#">长沙</a>
-									
-									
-									 
-									<a class="more" @mouseover="gengduo" @mouseout="xiaoshi" href="#">
-										更多<i v-show="xian" class="fa fa-sort-desc fa-lg"></i><i v-show="yin" class="fa fa-sort-up fa-lg"></i>
-									
-									</a>
-									<div class="city" v-show="yin" @mouseover="gengduo" @mouseout="xiaoshi">
-										  <span>重庆</span>
-										  <span>郑州</span>
-										  <span>青岛</span>
-										  <span>合肥</span>
-										  <span>福州</span>
-										  <span>济南</span>
-										  <span>大连</span>
-										  <span>珠海</span>
-										  <span>无锡</span>
-										  <span>佛山</span>
-										  <span>东莞</span>
-										  <span>宁波</span>
-										  <span>常州</span>
-										  <span>沈阳</span>
-										  <span>石家庄</span>
-										  <span>昆明</span>
-										  <span>南宁</span>
-										  <span>哈尔滨</span>
-										  <span>海口</span>
-										  <span>中山</span>
-										  <span>惠州</span>
-										  <span>贵阳</span>
-										  <span>长春</span>
-										  <span>太原</span>
-										  <span>嘉兴</span>
-										  <span>泰安</span>
-										  <span>昆山</span>
-										  <span>烟台</span>
-										  <span>全部城市 ></span>
+								<li :class="{write:isActive}" >
+									    <div>
+												   <span class="title">工作地点 :</span>
+											     <a href="#" v-for="item in wpList" :key="item.name" :class="{active:active==item.name}"  @mouseover="selected(item.name)">{{item.name}}</a>
+											</div>
 										
-									</div>
-<!------------------------------------------------------------------->			
-        
-<!---------------------------------------------------------------------------->
+										  <span class="more" @mouseover="gengduo('zhuan-up')" @mouseout="xiaoshi('zhuan-down')" href="#">
+												       更多<i :class="zhuan" class="fa fa-sort-desc fa-lg"></i>
+											</span>
+											
+											<div class="city" v-show="yin" @mouseover="gengduo('zhuan-up')" @mouseout="xiaoshi('zhuan-down')">
+												   <span href="#" v-for="item in wpList6" :key="item.morecity" :class="{active:active==item.morecity}"
+												 	 @mouseover="selected(item.morecity)">{{item.morecity}}</span>
+											</div>
 									
 								</li>
+								
 								<li>
-									<p>工作经验 :</p>
-									<a href="#">不限</a>
-									<a href="#">应届毕业生</a>
-									<a href="#">3年及以下</a>
-									<a href="#">3-5年</a>
-									<a href="#">5-10年</a>
-									<a href="#">10年以上</a>
-									<a href="#">不要求</a>
+									   <div>
+											<span class="title">工作经验  : </span>
+											<a href="#" v-for="item in wpList2" :key="item.jingyan" :class="{active:active==item.jingyan}"
+											@mouseover="selected(item.jingyan)">{{item.jingyan}}</a>
+									  </div> 
 								</li>
 								<li>
-									<p>学历要求:</p>
-									<a href="#">不限</a>
-									<a href="#">大专</a>
-									<a href="#">本科</a>
-									<a href="#">硕士</a>
-									<a href="#">博士</a>
-									<a href="#">不要求</a>
-									
+									<div>
+											<span class="title">学历要求 : </span>
+											<a href="#" v-for="item in wpList3" :key="item.xueli" :class="{active:active==item.xueli}"
+											@mouseover="selected(item.xueli)">{{item.xueli}}</a>
+									 </div> 
 								</li>
 								<li>
-									<p>公司规模 :</p>
-									<a href="#">不限</a>
-									<a href="#">不少于15人</a>
-									<a href="#">15-50人</a>
-									<a href="#">50-150人</a>
-									<a href="#">150-500人</a>
-									<a href="#">500-2000人</a>
-									<a href="#">2000人及以上</a>
-									
+									<div>
+											<span class="title">公司规模  : </span>
+										  <a href="#" v-for="item in wpList4" :key="item.guimo" :class="{active:active==item.guimo}"
+											@mouseover="selected(item.guimo)">{{item.guimo}}</a>
+									 </div> 
 								</li>
 								<li :class="{write:isActive}">
-									<p>行业领域 :</p>
-									<a href="#">不限</a>
-									<a href="#">移动互联网</a>
-									<a href="#">电商</a>
-									<a href="#">金融</a>
-									<a href="#">企业服务</a>
-									<a href="#">教育</a>
-									<a href="#">文娱|内容</a>
-									<a href="#">游戏</a>
-									<a href="#">消费生活</a>
-									<a href="#">硬件</a>
-									<a class="more" @mouseover="gengduo2" @mouseout="xiaoshi2" href="#">更多<i class="fa fa-sort-desc fa-lg"></i>
-										
-									</a>
-										<div class="job" v-show="jobyin" >
-										
-										  <span>社交</span>
-										  <span>旅游</span>
-										  <span>体育</span>
-										  <span>工具</span>
-										  <span>汽车丨出行</span>
-										  <span>物流丨运输</span>
-										  <span>医疗丨健康</span>
-										  <span>广告营销</span>
-										  <span>数据服务</span>
-										  <span>信息安全</span>
-										  <span>人工智能</span>
-										  <span>区块链</span>
-										  <span>物联网</span>
-										  <span>VR丨AR</span>
-										  <span>软件开发</span>
-										  <span>通讯电子</span>
-										  <span>房产家居</span>
-										  <span>其他</span>
-										  
-										
+									<div>
+											<span class="title">行业领域  : </span>
+											<a href="#" v-for="item in wpList5" :key="item.lingyu" :class="{active:active==item.lingyu}"
+											@mouseover="selected(item.lingyu)">{{item.lingyu}}</a>
+									</div>		  
+									<span class="more" @mouseover="gengduo2('zhuan-up')" @mouseout="xiaoshi2('zhuan-down')" href="#">
+												更多<i :class="zhuan2" class="fa fa-sort-desc fa-lg"></i>
+									</span>
+									<div class="job" v-show="jobyin" @mouseover="gengduo2('zhuan-up')" @mouseout="xiaoshi2('zhuan-down')">
+												
+											<span href="#" v-for="item in wpList7" :key="item.morejob" :class="{active:active==item.morejob}"
+											@mouseover="selected(item.morejob)">{{item.morejob}}</span>
+												  
+												
 									</div>
-										
+												
 									
 								</li>
 								
@@ -238,7 +93,6 @@
 			</div>
 			
 			
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<!------------------------------------------------->
 			<div class="middle-2">
 				<ul>
@@ -258,24 +112,10 @@
 				</div>
 			</div>
 			<!----------------------------------------------------->
-<<<<<<< HEAD
 			<div class="middle-3">
 			
-				<ul>
-					<li>
-						<jobList>
-							<p slot="details"><router-link to="/xiangqing">硬件工程师[ 广州 ]</router-link><span>00:19发布</span></p>
-							<p slot="tag"><span>电商</span><span>电ma</span></p>
-						
-						</jobList>
-					</li>
-					
-					
-				</ul>
 				
-=======
-			<div class="middle-3">				
-						<jobList v-for="item in nowjobArr" :imgSrc="item.cover_url" :key='index'>
+						<jobList v-for="(item,index) in nowjobArr" :imgSrc="item.cover_url" :key="index" >
 							<!--<p slot="details"><router-link to="/xiangqing">{{item.title}}</router-link><span>{{item.date}}发布</span></p>
 							<p slot="tag"><span>电商</span><span>电ma</span></p>-->
 							
@@ -292,8 +132,9 @@
 									<p>{{item.fuli}}</p>
 								</div>
 						
-						</jobList>								
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+						</jobList>
+				
+				
 			
 			</div>
 			<!------------------------------------------------------>
@@ -317,21 +158,6 @@
 			<!------------------------------------>
 			<div class="middle-5">
 				<div class="middle-5-1">
-<<<<<<< HEAD
-					<!--<span>上一页</span>
-					<span>1</span>
-					<span>2</span>
-					<span>3</span>
-					...
-					<span>30</span>
-					<span>下一页</span>-->
-					
-     <el-pagination
-			  background   	
-			 
-			  layout="prev, pager, next"
-			  :total="300">
-=======
 				
 					
      <el-pagination
@@ -340,31 +166,64 @@
 			  :page-size="pageSize"
 			  layout="prev, pager, next"
 			  :total="jobArr.length">
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
      </el-pagination>
 				</div>
 			</div>
 			
 			
 			<!--------------------->
-			<zuijin></zuijin>
+			 
+			<div class="middle-right">
+								<h3>最近浏览过</h3>
+								<div>
+									<p>出纳</p>
+									<p>4k-6k</p>
+									<p>细刻科技</p>
+								</div>
+								<div>
+									<p>模特</p>
+									<p>6k-12k</p>
+									<p>旅拍云约</p>
+								</div>
+								<img src="https://www.lgstatic.com/i/image2/M01/6B/6B/CgoB5l0-lnKAE814AAAg4aUrjLk355.PNG">
+								<img src="https://www.lgstatic.com/i/image2/M01/62/3C/CgotOV0tROeANdp4AACKU68GAEc723.JPG">
+								<img src="https://www.lgstatic.com/i/image2/M01/5F/E5/CgoB5l0ojBmAULrpAAA2Rjm2nqc492.JPG">
+							
+						</div>
+  
 			
 		</div><!--middle-->
 		<!---->
+		
+		<publicfooter></publicfooter>
   </div><!--jobHome-->
 </template>
 
 <script>
 import jobList from '../../components/jobList'
-import zuijin from '../../components/zuijin'
+
+import publictop from '../../components/publictop'
+import publicfooter from '../../components/publicfooter'
 export default {
   name: 'HelloWorld',
   data () {
     return {
-<<<<<<< HEAD
-      msg: 'Welcome to Your Vue.js App'
-=======
      jobArr:[],
+     wpList: [],
+     wpList2: [],
+     wpList3: [],
+     wpList4: [],
+     wpList5: [],
+     wpList6: [],
+     wpList7: [],
+    
+        
+     active:'',
+        
+										
+										
+
+      
      currentPage:1,
      pageSize:7,
      yin:false,
@@ -376,16 +235,16 @@ export default {
      yin1:false,
      xianbiao:true,
      yinbiao:false,
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+     zhuan:"",
+     zhuan2:"",
     }
   },
   components:{
-  	jobList,zuijin
-<<<<<<< HEAD
-=======
+  	jobList,publictop,publicfooter
   },
   mounted(){
   	this.getJobDate();
+  	this.getListDate();
   },
   computed:{
   	nowjobArr(){
@@ -399,35 +258,69 @@ export default {
   			this.jobArr=res.data.data.recommend_one
   		})
   	},
-  	gengduo(){
+  	getListDate(){
+  		this.$axios.get("https://www.easy-mock.com/mock/5d40e4603ef5b46c529f3f54/temp/List").then(res=>{
+//			console.log("----------------");
+//			console.log(res.data.data.wpList);
+//			console.log(res.data.data.wpList2);
+//			console.log(res.data.data.wpList3);
+//			console.log(res.data.data.wpList4);
+//			console.log(res.data.data.wpList5);
+//			console.log(res.data.data.wpList6);
+//			console.log(res.data.data.wpList7);
+  			
+  			
+        this.wpList=res.data.data.wpList;
+        this.wpList2=res.data.data.wpList2;
+        this.wpList3=res.data.data.wpList3;
+        this.wpList4=res.data.data.wpList4;
+        this.wpList5=res.data.data.wpList5;
+        this.wpList6=res.data.data.wpList6;
+        this.wpList7=res.data.data.wpList7;
+       
+  		})
+  		
+  	},
+  	gengduo(value){
+  		this.zhuan=value;
   		this.yin=true;
   	  this.xian=false;
   		this.isActive=true;
   		this.isActive1=true;
+  		this.zhuan=value;
+  		
   	},
-  	xiaoshi(){
+  	xiaoshi(value){
+  		  this.zhuan=value;
   			this.yin=false;
   			this.xian=true;
   			this.isActive=false;
   			this.isActive1=false;
-  	},
-  	gengduo2(){
-  		this.jobyin=true;
-  	
-  		this.isActive=true
-  	},
-  	xiaoshi2(){
-  			this.jobyin=false;
   			
-  			this.isActive=false
+  	},
+  	gengduo2(value){
+  		this.zhuan2=value;
+  		this.jobyin=true;
+  		this.isActive=true;
+  		
+  		
+  	},
+  	xiaoshi2(value){
+  			this.zhuan2=value;
+  			this.jobyin=false;
+  			this.iszhuan=false;
+  			this.isActive=false;
+  		
   	},
   	show(){
   		this.xian1=!this.xian1;
   		this.yin1=!this.yin1;
   		this.xianbiao=!this.xianbiao;
   		this.yinbiao=!this.yinbiao;
-  	}
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+  	},
+  	selected(name){
+		   this.active = name;
+		}
   }
 }
 </script>
@@ -442,19 +335,28 @@ export default {
 
 <style scoped lang="less">
 /*------------搜索------------------*/
+.active {
+   background: #00b38a!important;
+   
+   color: white!important;
+  /* padding: 2px 5px;*/
+ }
+.zhuan-down{
+	transform:rotate(0deg);
+	transition: 0.5s;
+}
+.zhuan-up{
+	transform:rotate(180deg);
+	transition: 0.5s;
+}
 
-<<<<<<< HEAD
 
-=======
 .write{
 	background: white;
-	/*transform: rotate(180deg);*/
-}
-
-.fa-rotate-180{
 	
 }
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+
+
 
 			.header1{
 				width: 100%;
@@ -500,30 +402,25 @@ export default {
  }
  
  .more{
- 	position: relative;
-<<<<<<< HEAD
-=======
+  position: relative;
  	display: inline-block;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+ 	padding: 5px;
  	
  }
  .fa-sort-desc{
  	position: absolute;
- 	top:-1px;
- 	right: -15px;
- 	font-size: 20px;
+ 	top:5px;
+ 	right: -11px;
+ 	font-size: 16px;
  	color:#00b38a ;
  }
-<<<<<<< HEAD
-=======
  .fa-sort-up{
  	position: absolute;
- 	top:5px;
- 	right: -15px;
- 	font-size: 20px;
+ 	top:13px;
+ 	right: -8px;
+ 	font-size: 16px;
  	color:#00b38a ;
  }
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
  /*----------------------------------------------*/
 .middle{
  	width: 60.7%;
@@ -531,8 +428,6 @@ export default {
  	margin-top: 30px;
  }
  
-<<<<<<< HEAD
-=======
  .buxian{
  	display: flex;
  	background:#fafafa ;
@@ -555,40 +450,41 @@ export default {
  
  
  
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
  .middle-1 ul{
  	background: #fafafa;
  	padding: 10px;
  	font-size: 13px;
-<<<<<<< HEAD
- 	border: 1px solid #ededed;
-=======
- /*	border: 1px solid #ededed;*/
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+/*	border: 1px solid red;*/
  }
  
  
 .middle-1 li{
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+/*	border: 1px solid blue;*/
 	
 }
-.middle-1 li p{
+.title{
 	font-weight: bolder;
 	font-size: 14px;
-	margin: 10px;
+	margin-right: 5px;
 }
 .middle-1 li a{
 	text-decoration: none;
 	color: black;
-	margin: 10px;
+	padding: 2px 5px;
+	margin: 5px;
+
+	
 }
+/*不限*/
 .middle-1 ul li a:nth-of-type(1){
 	background: #00b38a;
 	color: white;
 	padding: 1px 5px;
 }
-<<<<<<< HEAD
-=======
 
 .col{
 	background:#00b38a!important;
@@ -596,19 +492,16 @@ export default {
 	color: white!important;
 	}
 
-
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+/*全国*/
 .middle-1 ul li:nth-of-type(1) a:nth-of-type(1){
 	border: 1px solid darkgray;
 	padding: 1px 5px;
-	background: white;
 	color: black;
+	background: white;
 }
 .middle-1 ul li:nth-of-type(1){
 	position: relative;
 }
-<<<<<<< HEAD
-=======
 
 .city{
 	position: absolute;
@@ -621,23 +514,23 @@ export default {
 	border-top: 1px dashed #E0E0E0;
 	padding: 5px;
 	color: black;
+
+
 	
 }
 .city span{
 	margin: 8px;
+	padding: 1px 3px;
 	line-height: 20px;
 }
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
-.middle-1 ul li:nth-of-type(1) a:nth-of-type(15){
-	position: absolute;
-	top:0;
-	right: 0px;
-}
+
+
 .middle-1 ul li:nth-of-type(5){
 	position: relative;
 }
-<<<<<<< HEAD
-=======
+
+
+
 .job{
 	
 	position: absolute;
@@ -655,33 +548,26 @@ export default {
 }
 .job span{
 	margin: 10px;
+	padding: 1px 3px;
 	line-height: 25px;
 }
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
-.middle-1 ul li:nth-of-type(5) a:nth-of-type(11){
-	position: absolute;
-	top:0;
-	right: 0px;
-}
+
 .middle-1{
 	position: relative;
 }
-
+/*.middle-1 a{
+	display: inline-block;
+	width: 100px;
+}*/
 .fa-angle-up{
-<<<<<<< HEAD
-	
-=======
 	position:absolute ;
 	bottom: 3px;
 	left: 50%;
 	transform: translate(-50%);
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	color: #e4e4e4;
 	
 	
 }
-<<<<<<< HEAD
-=======
 
 .fa-angle-down{
 	position:absolute ;
@@ -695,7 +581,6 @@ export default {
 	position: relative;
 	border: 1px solid #ededed;
 }
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 .shousuo{
 	position: absolute;
 	bottom: -21px;
@@ -709,10 +594,7 @@ export default {
 	line-height: 20px;
 	border:1px solid #ededed;
 	border-top: none;
-<<<<<<< HEAD
-=======
 	z-index: 1;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 }
 
 /*-------------------------------------*/
@@ -786,19 +668,13 @@ export default {
 .middle-3 {
 	margin-top: 20px;
 }
-<<<<<<< HEAD
-.middle-3 ul li{
-=======
 .middle-3 jobList{
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 	background:#fafafa;
 	list-style-type: none;
 	padding: 10px;
 	border: 1px solid #ededed;
 	
 }
-<<<<<<< HEAD
-=======
 .middle-3 .right{
 	/*border: 1px solid red;*/
 	width: 350px;
@@ -818,7 +694,6 @@ export default {
 
 
 
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 /*4*/
 
 .middle-4 p{
@@ -869,13 +744,60 @@ export default {
           color:white;
           background:#00b38a ;
 }
-<<<<<<< HEAD
-/*right*/
-/*.middle{
+
+
+.middle{
 	position: relative;
-}*/
-=======
+}
+.middle-right{
+	padding: 5px;
+	position: absolute;
+	top: 0px;
+	right:-280px ;
+	background:#fafafa ;
+	width: 230px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.middle-right div{
+	width: 100%;
+	background: white;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+.middle-right div:nth-of-type(1){
+	border-bottom: 1px dashed #ededed;
+	
+}
+.middle-right div p{
+	margin-bottom: 3px;
+	
+	box-sizing: border-box;
+}
+.middle-right div p:nth-of-type(1){
+	font-size: 15px;
+	
+}
+.middle-right div p:nth-of-type(2){
+	font-size: 14px;
+	color: #fd6951;
+	margin-bottom: 6px;
+}
+.middle-right div p:nth-of-type(3){
+	font-size: 13px;
+	color: #999999;
+}
 
 
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+
+.middle-right img{
+	width: 100%;
+	margin-top: 10px;
+}
+.middle-right h3{
+	margin-bottom: 5px;
+	font-weight: normal;
+} 
+
+
 </style>

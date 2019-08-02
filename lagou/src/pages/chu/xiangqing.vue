@@ -1,11 +1,6 @@
 <template>
   <div class="xiangqing">
-<<<<<<< HEAD
-   <xiangTop></xiangTop>
-   <xiangMiddle></xiangMiddle>
-   <xiangBottom></xiangBottom>
-=======
-  	    
+  	     <publictop></publictop>
   	<div id="boxFixed" :class="{'is_fixed' : isFixed}" v-show="isFixed">  
 		    <div class="ding">
 		     	<p class="ding-job">硬件工程师 / <span> 15k-25k</span></p>
@@ -30,7 +25,7 @@
    
    
   <!-- <xiangBottom></xiangBottom>-->
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
+  	<publicfooter></publicfooter>
   </div>
 </template>
 
@@ -38,24 +33,20 @@
 import xiangTop from '../../components/xiangTop'
 import xiangMiddle from '../../components/xiangMiddle'
 import xiangBottom from '../../components/xiangBottom'
+import publictop from '../../components/publictop'
+import publicfooter from '../../components/publicfooter'
 export default {
   name: 'HelloWorld',
   data () {
     return {
-<<<<<<< HEAD
-      msg: 'Welcome to Your Vue.js App'
-=======
     isFixed:"",
     isshow:false,
     ischange:false
    
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
     }
   },
   components:{
-  	xiangTop,xiangMiddle,xiangBottom
-<<<<<<< HEAD
-=======
+  	xiangTop,xiangMiddle,xiangBottom,publictop,publicfooter,
   },
   mounted(){
     window.addEventListener('scroll',this.handleScroll);// 监听滚动事件，然后用handleScroll这个方法进行相应的处理
@@ -102,15 +93,12 @@ export default {
 			    		this.ischange=false;
 			    }
   		},
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-<<<<<<< HEAD
-=======
 #boxFixed{
 	width: 100%;
 }
@@ -202,6 +190,5 @@ export default {
 .up{
 	 background-position-x: -37px;
 }
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 
 </style>

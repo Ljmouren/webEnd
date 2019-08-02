@@ -22,13 +22,6 @@
 						   		<li>6、能够独立完成迭代产品的硬件设计，有海思芯片硬件设计量产经验；</li>
 						   		<li>7、有汽车电子行业经验优先。</li>
 						   		<li><h3>工作地址</h3></li>
-<<<<<<< HEAD
-						   		<li class="dizhi"><span>深圳</span><span>-</span><span>南山区</span><span>-</span><span>前海</span><span>-</span><span>南海大道创意大厦</span><a>查看地图</a></li>
-						   		<li> <h3>职位发布者:</h3></li>
-						   		<li class="fabu">
-						   			
-						   			<img src="img/aa.jpeg"/> 
-=======
 						   		<li class="dizhi"><span>深圳</span><span>-</span><span>南山区</span><span>-</span><span>前海</span><span>-</span><span>南海大道创意大厦</span><a @click="chakanMap">查看地图</a></li>
 						   		<li class="ditu">
 						   			 <baidu-map class="map" v-show="xian" :center="center" :zoom="zoom" @ready="handler"></baidu-map>
@@ -37,7 +30,6 @@
 						   		<li class="fabu">
 						   			
 						   			<img class="touxiang" src="//www.lgstatic.com/thumbnail_120x120/i/image2/M00/4A/3D/CgotOVrrEmOAQOM3AAAVDoHzUvE735.jpg"/> 
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 						   				
 						   			<div>
 						   		    	<p>活跃时段  <i class="fa fa-question-circle-o"></i></p>
@@ -69,38 +61,6 @@
 						    </div>
 						    
 						    <div class="zhong-3">
-<<<<<<< HEAD
-						    <div class="haikan">
-						    	<img src="img/B1.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>交控科技</P>
-						    </div>
-						    <div class="haikan">
-						    	<img src="img/B2.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>雪球科技</P>
-						    </div>
-						    <div class="haikan">
-						    	<img src="img/B3.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>灵喵机器人</P>
-						    </div>
-						    <div class="haikan">
-						    	<img src="img/B4.jpg" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>普创天信</P>
-						    </div>
-						    <div class="haikan">
-						    	<img src="img/B5.png" />
-						    	<p>嵌入式硬件</p>
-						    	<p>15k-25k</p>
-						    	<P>大普微</P>
-						    </div>
-=======
 						    <div class="haikan" v-for="item in jobArr3">
 						    	<img :src="item.cover_url" />
 						    	<p>{{item.type}}</p>
@@ -108,7 +68,6 @@
 						    	<P>{{item.jobName}}</P>
 						    </div>
 						    
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 						  
 						    </div>
 						    
@@ -130,14 +89,10 @@
 					<div class="zhong-right">
 						<div class="zhong-2">
 							<div class="zhong-2-1">
-<<<<<<< HEAD
-								<p class="p1"><img class="tu-1" src="img/ss.png"/><a class="kai">开易科技</a><img class="tu-2" src="img/gou.png"/></p>
-=======
 								<p class="p1"><img class="tu-1" src="//www.lgstatic.com/thumbnail_160x160/i/image/M00/9A/8F/CgqKkVihZ_OARyluAAASog9Z9z8701.png"/><a class="kai">开易科技</a>
 									<span class="tu-2">	<i class="fa fa-get-pocket fa-lg"></i></span>
 								
 							</p>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 							    <p><i class="fa fa-qrcode fa-lg"></i> 数据服务,其他</p>
 							    <p><i class="fa fa-line-chart fa-lg"></i> A轮</p>
 							    <p><i class="fa fa-user-o fa-lg"></i>  50-150人</p>
@@ -145,48 +100,6 @@
 							</div>
 							<div class="zhong-2-2">
 								<h1>相似职位</h1>
-<<<<<<< HEAD
-								<div class="xiaokuang">
-									<img src="img/22.jpg"  />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-								<div class="xiaokuang">
-									<img src="img/33.png" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-								<div class="xiaokuang">
-									<img src="img/feng.jpg" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-								<div class="xiaokuang">
-									<img src="img/44.jpg" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-								<div class="xiaokuang">
-									<img src="img/22.jpg" />
-									<div class="xiaokuang-1">
-										<p>硬件工程师</p>
-										<p>10k-20k</p>
-										<p>古瑞瓦特[深圳·宝安区]</p>
-									</div>
-								</div>
-=======
 								
 								
 								<div class="xiaokuang" v-for="item in jobArr2">
@@ -201,7 +114,6 @@
 								
 								
 						
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 							    <p class="more"><a href="#">查看更多相似职位</a><i class="fa fa-angle-right fa-lg"></i></p>
 							</div>
 							
@@ -217,9 +129,6 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-<<<<<<< HEAD
-      msg: 'Welcome to Your Vue.js App'
-=======
      jobArr1:[],
      center: {lng: 0, lat: 0},
       zoom: 3,
@@ -256,7 +165,6 @@ computed:{
     },
     chakanMap(){
     	this.xian=!this.xian
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
     }
   }
 }
@@ -264,10 +172,6 @@ computed:{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-<<<<<<< HEAD
-h3{
-	font-weight: bold;
-=======
 .map {
   width: 100%;
   height: 400px;
@@ -278,7 +182,6 @@ h3{
 }
 .touxiang{
 	border-radius: 50%;
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 }
 .zhong{
 	background: #f2f5f4;
@@ -581,10 +484,7 @@ h3{
 	color: #737373;
 	margin-right: 10px;
 }
-<<<<<<< HEAD
-=======
 .fa-get-pocket{
 	color: #00b38a;
 }
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 </style>

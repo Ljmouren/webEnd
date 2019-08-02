@@ -16,10 +16,6 @@
 	</natures>
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-=======
-			<id>1564553233247</id>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<id>1564472770534</id>
 			<name></name>
 			<type>26</type>
@@ -47,11 +43,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1564644511971</id>
-=======
 			<id>1564553787021</id>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -60,11 +52,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1564644554519</id>
-=======
 			<id>1564554241247</id>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -73,9 +61,6 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1564644607603</id>
-=======
 			<id>1564572288809</id>
 			<name></name>
 			<type>26</type>
@@ -86,7 +71,6 @@
 		</filter>
 		<filter>
 			<id>1564573014389</id>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<name></name>
 			<type>26</type>
 			<matcher>

@@ -3,13 +3,10 @@
 		<form>
 			<slot name="phonenum"></slot>
 			<slot name="ainput"></slot>
-<<<<<<< HEAD
 			<slot name="tishik1"></slot>
 			<slot name="binput"></slot>
 			<slot name="tishik2"></slot>
-=======
 			<slot name="binput"></slot>
->>>>>>> e485f0fb49e92e2f3bf4de80aceebd220c400faf
 			<slot name="btn"></slot>
 			<slot name="wangjimima"></slot>
 		</form>
